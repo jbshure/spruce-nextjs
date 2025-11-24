@@ -2,10 +2,10 @@ import Link from 'next/link';
 
 export default function TrustProof() {
   return (
-    <section className="py-20 bg-white">
+    <section className="section-white">
       <div className="container-custom">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-4">Industry-Leading Compliance & Certification</h2>
+          <h2 className="heading-lg mb-4">Industry-Leading Compliance & Certification</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Full insurance coverage, vetted vendors, and documented compliance for every service
           </p>
@@ -13,7 +13,7 @@ export default function TrustProof() {
 
         {/* Compliance Cards */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
-          <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8 border-2 border-blue-200">
+          <div className="card card-hover bg-gradient-to-br from-blue-50 to-blue-100 p-8 border-2 border-blue-200 animate-fade-in">
             <div className="w-16 h-16 bg-blue-600 rounded-xl flex items-center justify-center mb-4">
               <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
@@ -34,7 +34,7 @@ export default function TrustProof() {
             </a>
           </div>
 
-          <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-8 border-2 border-green-200">
+          <div className="card card-hover bg-gradient-to-br from-green-50 to-green-100 p-8 border-2 border-green-200 animate-fade-in">
             <div className="w-16 h-16 bg-green-600 rounded-xl flex items-center justify-center mb-4">
               <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
@@ -55,7 +55,7 @@ export default function TrustProof() {
             </a>
           </div>
 
-          <div className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl p-8 border-2 border-purple-200">
+          <div className="card card-hover bg-gradient-to-br from-purple-50 to-purple-100 p-8 border-2 border-purple-200 animate-fade-in">
             <div className="w-16 h-16 bg-purple-600 rounded-xl flex items-center justify-center mb-4">
               <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
@@ -78,8 +78,8 @@ export default function TrustProof() {
         </div>
 
         {/* SLA Terms */}
-        <div className="bg-gradient-to-br from-gray-900 to-gray-800 text-white rounded-3xl p-12 mb-16">
-          <h3 className="text-3xl font-bold mb-8 text-center">Our Service Level Commitments</h3>
+        <div className="card bg-gradient-to-br from-gray-900 to-gray-800 text-white rounded-3xl p-12 mb-16 animate-scale-in">
+          <h3 className="heading-md mb-8 text-center text-white">Our Service Level Commitments</h3>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
@@ -133,10 +133,10 @@ export default function TrustProof() {
 
         {/* Client Results */}
         <div>
-          <h3 className="text-3xl font-bold mb-8 text-center">Trusted by Leading Restaurant Brands</h3>
+          <h3 className="heading-md mb-8 text-center">Trusted by Leading Restaurant Brands</h3>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-gray-50 rounded-2xl p-8 border border-gray-200">
+            <div className="card card-hover p-8 border border-gray-200 animate-scale-in">
               <div className="flex items-center mb-4">
                 <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mr-4">
                   <svg className="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -167,7 +167,7 @@ export default function TrustProof() {
               </div>
             </div>
 
-            <div className="bg-gray-50 rounded-2xl p-8 border border-gray-200">
+            <div className="card card-hover p-8 border border-gray-200 animate-scale-in">
               <div className="flex items-center mb-4">
                 <div className="w-16 h-16 bg-secondary/10 rounded-xl flex items-center justify-center mr-4">
                   <svg className="w-8 h-8 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -198,7 +198,7 @@ export default function TrustProof() {
               </div>
             </div>
 
-            <div className="bg-gray-50 rounded-2xl p-8 border border-gray-200">
+            <div className="card card-hover p-8 border border-gray-200 animate-scale-in">
               <div className="flex items-center mb-4">
                 <div className="w-16 h-16 bg-green-100 rounded-xl flex items-center justify-center mr-4">
                   <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">

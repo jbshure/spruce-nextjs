@@ -65,11 +65,11 @@ export default function HomePageClient() {
                     });
                   }
                 }}
-                className="bg-white text-primary px-8 py-4 rounded-2xl font-bold text-lg hover:bg-gray-100 transition text-center"
+                className="btn-secondary btn-lg text-center"
               >
                 Get Custom Facilities Quote
               </button>
-              <Link href="#roi-calculator" className="bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white px-8 py-4 rounded-2xl font-bold text-lg hover:bg-white/20 transition text-center">
+              <Link href="#roi-calculator" className="btn-ghost btn-lg text-center">
                 Calculate Savings
               </Link>
             </div>
@@ -93,10 +93,10 @@ export default function HomePageClient() {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-20 bg-gray-50">
+      <section id="services" className="section-gray">
         <div className="container-custom">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">Complete Facilities Management</h2>
+            <h2 className="heading-lg mb-4">Complete Facilities Management</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Everything your multi-location restaurant chain needs in one partner
             </p>
@@ -135,7 +135,7 @@ export default function HomePageClient() {
                 link: '/multi-location-cleaning'
               }
             ].map((service, idx) => (
-              <Link key={idx} href={service.link} className="bg-white rounded-2xl p-6 shadow-custom-md hover:shadow-custom-xl transition-all duration-300 group">
+              <Link key={idx} href={service.link} className="card card-hover p-6 group animate-fade-in">
                 <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition">{service.title}</h3>
                 <p className="text-gray-600">{service.description}</p>
                 <div className="mt-4 text-primary font-semibold">Learn more →</div>
@@ -151,9 +151,9 @@ export default function HomePageClient() {
       </div>
 
       {/* How Quote Process Works */}
-      <section className="py-20 bg-white">
+      <section className="section-white">
         <div className="container-custom max-w-4xl">
-          <h2 className="text-4xl font-bold text-center mb-12">How the Quote Process Works</h2>
+          <h2 className="heading-lg text-center mb-12">How the Quote Process Works</h2>
           <div className="grid md:grid-cols-4 gap-8">
             {[
               {
@@ -236,7 +236,7 @@ export default function HomePageClient() {
                       });
                     }
                   }}
-                  className="inline-flex items-center rounded-md bg-slate-900 px-5 py-2.5 text-sm font-semibold text-white hover:bg-slate-800"
+                  className="btn-primary btn-sm"
                 >
                   See how the platform works
                 </button>
@@ -313,9 +313,9 @@ export default function HomePageClient() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-20 bg-gradient-to-br from-primary to-secondary text-white">
+      <section className="section-primary">
         <div className="container-custom text-center">
-          <h2 className="text-4xl font-bold mb-4">Ready to Streamline Your Facility Operations?</h2>
+          <h2 className="heading-lg mb-4">Ready to Streamline Your Facility Operations?</h2>
           <p className="text-xl mb-8 text-white/90">Join 50+ multi-location restaurant brands saving 28% on facility costs</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
@@ -328,13 +328,13 @@ export default function HomePageClient() {
                   });
                 }
               }}
-              className="bg-white text-primary px-10 py-4 rounded-2xl font-bold text-lg hover:bg-gray-100 transition"
+              className="btn-secondary btn-lg"
             >
               Get Custom Facilities Quote
             </button>
             <a
               href="tel:+18772532646"
-              className="bg-white/10 backdrop-blur-sm border-2 border-white text-white px-10 py-4 rounded-2xl font-bold text-lg hover:bg-white/20 transition"
+              className="btn-ghost btn-lg"
             >
               Call 1-877-CLEANING
             </a>

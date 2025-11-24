@@ -15,7 +15,7 @@ export default function RepairsPage() {
   return (
     <main>
       {/* Hero */}
-      <section className="py-20 bg-gradient-to-br from-primary to-secondary text-white">
+      <section className="section-primary">
         <div className="container-custom">
           <div className="text-sm text-white/80 mb-4">
             <Link href="/" className="hover:text-white">
@@ -23,7 +23,7 @@ export default function RepairsPage() {
             </Link>{" "}
             / <span>Light Repairs</span>
           </div>
-          <h1 className="text-5xl md:text-6xl font-extrabold mb-6 leading-tight">
+          <h1 className="heading-xl mb-6 text-white">
             Light Repairs for Multi-Location Restaurants
           </h1>
           <p className="text-xl text-white/90 max-w-3xl mb-8">
@@ -34,13 +34,13 @@ export default function RepairsPage() {
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
               href="/#quote"
-              className="bg-white text-primary px-8 py-4 rounded-2xl font-bold hover:bg-gray-100 transition text-center"
+              className="btn-secondary text-center"
             >
               Add Repairs to My Program
             </Link>
             <a
               href="tel:+18772532646"
-              className="bg-white/10 backdrop-blur-sm border-2 border-white text-white px-8 py-4 rounded-2xl font-bold hover:bg-white/20 transition text-center"
+              className="btn-ghost text-center"
             >
               Call 1-877-CLEANING
             </a>
@@ -49,9 +49,9 @@ export default function RepairsPage() {
       </section>
 
       {/* Scope */}
-      <section className="py-20">
+      <section className="section-white">
         <div className="container-custom">
-          <h2 className="text-3xl font-bold mb-6">What We Handle In-House</h2>
+          <h2 className="heading-md mb-6">What We Handle In-House</h2>
           <p className="text-lg text-gray-700 mb-8 max-w-3xl">
             We&apos;re not trying to replace licensed trades. We&apos;re here to
             knock out the constant small issues that bog down your stores and
@@ -104,9 +104,9 @@ export default function RepairsPage() {
       </section>
 
       {/* Coordination with Vendors */}
-      <section className="py-20 bg-gray-50">
+      <section className="section-gray">
         <div className="container-custom">
-          <h2 className="text-3xl font-bold mb-6">
+          <h2 className="heading-md mb-6">
             When It&apos;s Bigger Than a Light Repair
           </h2>
           <p className="text-lg text-gray-700 mb-8 max-w-3xl">
@@ -126,7 +126,7 @@ export default function RepairsPage() {
       {/* CTA */}
       <section className="py-20 bg-gradient-to-br from-gray-900 to-gray-800 text-white">
         <div className="container-custom text-center">
-          <h2 className="text-4xl font-bold mb-4">
+          <h2 className="heading-lg mb-4 text-white">
             Tired of staring at the same small issues every week?
           </h2>
           <p className="text-xl mb-8 text-white/90">
@@ -136,13 +136,13 @@ export default function RepairsPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="tel:+18772532646"
-              className="bg-white text-gray-900 px-8 py-4 rounded-2xl font-bold hover:bg-gray-100 transition"
+              className="btn-secondary"
             >
               Call 1-877-CLEANING
             </a>
             <Link
               href="/#quote"
-              className="bg-white/10 backdrop-blur-sm border-2 border-white text-white px-8 py-4 rounded-2xl font-bold hover:bg-white/20 transition"
+              className="btn-ghost"
             >
               Get Free Quote
             </Link>

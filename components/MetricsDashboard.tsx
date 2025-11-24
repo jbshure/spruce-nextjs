@@ -48,13 +48,13 @@ export default function MetricsDashboard() {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-100 to-gray-200">
+    <section className="section-gray">
       <div className="container-custom">
         <div className="text-center mb-12">
           <div className="inline-block bg-primary/10 text-primary px-4 py-2 rounded-full font-semibold text-sm mb-4">
             Updated November 2024 • Live Data
           </div>
-          <h2 className="text-4xl font-bold mb-4">Real-Time Performance Dashboard</h2>
+          <h2 className="heading-lg mb-4">Real-Time Performance Dashboard</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Transparency you can trust — see the exact metrics we track across 2,000+ restaurant locations
           </p>
@@ -104,7 +104,7 @@ export default function MetricsDashboard() {
           {currentMetrics.map((metric, idx) => (
             <div
               key={idx}
-              className="bg-white rounded-2xl shadow-xl p-6 hover:shadow-2xl transition transform hover:-translate-y-1"
+              className="card card-hover p-6 animate-scale-in"
               style={{ transitionDelay: `${idx * 50}ms` }}
             >
               <div className={`inline-block bg-gradient-to-r ${getColorClasses(metric.color)} text-white px-3 py-1 rounded-lg text-xs font-bold mb-3`}>
@@ -123,10 +123,10 @@ export default function MetricsDashboard() {
         </div>
 
         {/* Dashboard Preview */}
-        <div className="bg-white rounded-3xl shadow-2xl p-8">
+        <div className="card p-8 animate-fade-in">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">
             <div>
-              <h3 className="text-2xl font-bold mb-2">You'll Get Dashboard Access at Go-Live</h3>
+              <h3 className="heading-sm mb-2">You'll Get Dashboard Access at Go-Live</h3>
               <p className="text-gray-600">Real-time visibility across all locations, vendors, and work orders</p>
             </div>
             <div className="mt-4 md:mt-0">

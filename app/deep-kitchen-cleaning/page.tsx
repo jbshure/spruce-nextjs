@@ -12,27 +12,27 @@ export const metadata: Metadata = {
 export default function DeepKitchenCleaning() {
   return (
     <>
-      <section className="bg-gradient-to-br from-primary to-secondary text-white py-20">
+      <section className="section-primary">
         <div className="container-custom">
           <div className="text-sm text-white/80 mb-4">
             <Link href="/" className="hover:text-white">Home</Link> / <Link href="/#services" className="hover:text-white">Services</Link> / <span>Deep Kitchen Cleaning</span>
           </div>
-          <h1 className="text-5xl md:text-6xl font-extrabold mb-6 leading-tight">
+          <h1 className="heading-xl mb-6 text-white">
             Deep Kitchen Cleaning Services in Los Angeles, CA
           </h1>
           <p className="text-xl mb-8 text-white/90 max-w-4xl">
             When nightly cleaning isn't enough, you need a real deep clean. Spruce provides deep kitchen cleaning in Los Angeles that strips out grease, restores surfaces, and gets you inspection-ready.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <a href="#quote" className="bg-white text-primary px-8 py-4 rounded-2xl font-bold hover:bg-gray-100 transition text-center">Book a Deep Clean</a>
-            <a href="tel:+18772532646" className="bg-white/10 backdrop-blur-sm border-2 border-white text-white px-8 py-4 rounded-2xl font-bold hover:bg-white/20 transition text-center">Call 1-877-CLEANING</a>
+            <a href="#quote" className="btn-secondary text-center">Book a Deep Clean</a>
+            <a href="tel:+18772532646" className="btn-ghost text-center">Call 1-877-CLEANING</a>
           </div>
         </div>
       </section>
 
-      <section className="py-20">
+      <section className="section-white">
         <div className="container-custom">
-          <h2 className="text-4xl font-bold mb-6">What "Deep Kitchen Cleaning" Actually Means</h2>
+          <h2 className="heading-lg mb-6">What "Deep Kitchen Cleaning" Actually Means</h2>
           <p className="text-lg text-gray-700 mb-8">Deep cleaning is not a slightly longer nightly service. It's a different level of work.</p>
           <div className="grid md:grid-cols-2 gap-12">
             <div>
@@ -51,9 +51,9 @@ export default function DeepKitchenCleaning() {
         </div>
       </section>
 
-      <section className="py-20 bg-gray-50">
+      <section className="section-gray">
         <div className="container-custom">
-          <h2 className="text-4xl font-bold text-center mb-12">Quarterly / Semi-Annual Deep Cleaning Programs</h2>
+          <h2 className="heading-lg text-center mb-12">Quarterly / Semi-Annual Deep Cleaning Programs</h2>
           <div className="grid md:grid-cols-3 gap-8">
             {[
               { stat: '4x', label: 'Annual Deep Cleans (High-Volume)' },

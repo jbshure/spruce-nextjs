@@ -12,27 +12,27 @@ export const metadata: Metadata = {
 export default function NightlyCleaning() {
   return (
     <>
-      <section className="bg-gradient-to-br from-primary to-secondary text-white py-20">
+      <section className="section-primary">
         <div className="container-custom">
           <div className="text-sm text-white/80 mb-4">
             <Link href="/" className="hover:text-white">Home</Link> / <Link href="/#services" className="hover:text-white">Services</Link> / <span>Nightly Cleaning</span>
           </div>
-          <h1 className="text-5xl md:text-6xl font-extrabold mb-6 leading-tight">
+          <h1 className="heading-xl mb-6 text-white">
             Nightly Restaurant Cleaning Services — Los Angeles
           </h1>
           <p className="text-xl mb-8 text-white/90 max-w-4xl">
             Daily maintenance is the foundation. Spruce provides nightly restaurant cleaning in Los Angeles that keeps your kitchen, dining room, and restrooms ready for every shift.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <a href="#quote" className="bg-white text-primary px-8 py-4 rounded-2xl font-bold hover:bg-gray-100 transition text-center">Start Nightly Cleaning Program</a>
-            <a href="tel:+18772532646" className="bg-white/10 backdrop-blur-sm border-2 border-white text-white px-8 py-4 rounded-2xl font-bold hover:bg-white/20 transition text-center">Call 1-877-CLEANING</a>
+            <a href="#quote" className="btn-secondary text-center">Start Nightly Cleaning Program</a>
+            <a href="tel:+18772532646" className="btn-ghost text-center">Call 1-877-CLEANING</a>
           </div>
         </div>
       </section>
 
-      <section className="py-20">
+      <section className="section-white">
         <div className="container-custom">
-          <h2 className="text-4xl font-bold mb-6">What "Nightly Cleaning" Includes</h2>
+          <h2 className="heading-lg mb-6">What "Nightly Cleaning" Includes</h2>
           <p className="text-lg text-gray-700 mb-8">Nightly cleaning is your consistent baseline. We handle:</p>
           <div className="grid md:grid-cols-2 gap-8">
             <ul className="space-y-3">
@@ -48,9 +48,9 @@ export default function NightlyCleaning() {
         </div>
       </section>
 
-      <section className="py-20 bg-gray-50">
+      <section className="section-gray">
         <div className="container-custom">
-          <h2 className="text-4xl font-bold text-center mb-12">Consistency & Accountability</h2>
+          <h2 className="heading-lg text-center mb-12">Consistency & Accountability</h2>
           <div className="grid md:grid-cols-3 gap-8">
             {[
               { title: 'Same Team', desc: 'We assign the same crew to your location so they learn your space' },
