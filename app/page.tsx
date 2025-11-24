@@ -1,9 +1,89 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import Script from 'next/script';
+
+const spruceOrgSchema = {
+  "@context": "https://schema.org",
+  "@type": ["Organization", "LocalBusiness"],
+  "name": "Spruce",
+  "legalName": "Spruce Facilities Management Inc.", // TODO: Replace with actual legal entity name
+  "url": "https://www.heyspruce.com",
+  "logo": "https://www.heyspruce.com/images/logo.png",
+  "telephone": "+18772532646",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "1234 Example St, Suite 200", // TODO: Replace with real street address
+    "addressLocality": "Los Angeles",
+    "addressRegion": "CA",
+    "postalCode": "90001", // TODO: Replace with real postal code
+    "addressCountry": "US"
+  },
+  "sameAs": [
+    "https://www.heyspruce.com"
+    // TODO: Add Google Business Profile, Yelp, LinkedIn, Instagram when available
+  ]
+};
+
+const spruceServiceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Restaurant Facilities Management & Cleaning for Multi-Location Chains",
+  "description": "End-to-end facilities partner for multi-location restaurant chains in Los Angeles, including nightly cleaning, deep kitchen cleaning, preventive maintenance, light repairs, and vendor management.",
+  "provider": {
+    "@type": "Organization",
+    "name": "Spruce",
+    "url": "https://www.heyspruce.com"
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "Los Angeles"
+  },
+  "serviceArea": {
+    "@type": "GeoCircle",
+    "geoMidpoint": {
+      "@type": "GeoCoordinates",
+      "latitude": 34.0522,
+      "longitude": -118.2437
+    },
+    "geoRadius": 50000
+  },
+  "serviceType": [
+    "Restaurant cleaning",
+    "Commercial kitchen cleaning",
+    "Nightly cleaning",
+    "Deep cleaning",
+    "Preventive maintenance",
+    "Light repairs",
+    "Vendor management"
+  ],
+  "availableChannel": {
+    "@type": "ServiceChannel",
+    "serviceUrl": "https://www.heyspruce.com/#quote",
+    "availableLanguage": ["en"]
+  }
+};
 
 export default function Home() {
   return (
-    <main>
+    <>
+      <Script
+        id="spruce-org-schema"
+        type="application/ld+json"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(spruceOrgSchema)
+        }}
+      />
+      <Script
+        id="spruce-service-schema"
+        type="application/ld+json"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(spruceServiceSchema)
+        }}
+      />
+
+      <main>
       {/* Hero Section */}
       <section className="relative min-h-[70vh] bg-gradient-to-br from-primary via-primary-dark to-secondary flex items-center overflow-hidden">
         <div className="absolute inset-0">
@@ -186,7 +266,43 @@ export default function Home() {
                   <span className="font-semibold text-emerald-600">94%</span>
                 </div>
               </div>
-              <div className="mt-6 h-32 rounded-lg bg-slate-100" />
+
+              {/* Platform visualization mockup */}
+              <div className="mt-6 rounded-lg border border-slate-200 bg-slate-50 p-4">
+                <div className="mb-3 flex items-center gap-2">
+                  <div className="h-2 w-2 rounded-full bg-emerald-500"></div>
+                  <span className="text-xs font-medium text-slate-600">Recent Work Orders</span>
+                </div>
+                <div className="space-y-2">
+                  <div className="flex items-center justify-between rounded bg-white p-2 text-xs border border-slate-100">
+                    <div>
+                      <div className="font-semibold text-slate-800">Santa Monica #4</div>
+                      <div className="text-slate-500">Walk-in cooler temp alert</div>
+                    </div>
+                    <span className="rounded-full px-2 py-1 text-xs font-medium bg-yellow-50 text-yellow-700">
+                      In Progress
+                    </span>
+                  </div>
+                  <div className="flex items-center justify-between rounded bg-white p-2 text-xs border border-slate-100">
+                    <div>
+                      <div className="font-semibold text-slate-800">Downtown #1</div>
+                      <div className="text-slate-500">Nightly cleaning complete</div>
+                    </div>
+                    <span className="rounded-full px-2 py-1 text-xs font-medium bg-emerald-50 text-emerald-700">
+                      Complete
+                    </span>
+                  </div>
+                  <div className="flex items-center justify-between rounded bg-white p-2 text-xs border border-slate-100">
+                    <div>
+                      <div className="font-semibold text-slate-800">Pasadena #2</div>
+                      <div className="text-slate-500">Hood cleaning scheduled</div>
+                    </div>
+                    <span className="rounded-full px-2 py-1 text-xs font-medium bg-blue-50 text-blue-700">
+                      Scheduled
+                    </span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -374,6 +490,61 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Resources / Blog Section */}
+      <section className="py-16 md:py-24 bg-slate-50">
+        <div className="container-custom max-w-6xl">
+          <div className="mb-10">
+            <h2 className="text-3xl font-semibold tracking-tight md:text-4xl text-gray-900">
+              Resources for Restaurant Operators
+            </h2>
+            <p className="mt-3 text-slate-700">
+              Guides, checklists, and best practices from our team to yours.
+            </p>
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-3">
+            <Link href="/blog/health-inspection-checklist-los-angeles" className="group flex h-full flex-col rounded-xl border border-slate-200 bg-white p-6 shadow-sm hover:shadow-md transition">
+              <span className="text-xs font-semibold text-primary uppercase tracking-wide">Health & Compliance</span>
+              <h3 className="mt-2 text-lg font-semibold text-slate-900 group-hover:text-primary transition">
+                Complete Health Inspection Checklist for LA Restaurants
+              </h3>
+              <p className="mt-2 text-sm text-slate-600 flex-grow">
+                Everything LA County health inspectors check. Use this checklist to prepare and pass with flying colors.
+              </p>
+              <div className="mt-4 text-sm text-slate-500">8 min read</div>
+            </Link>
+
+            <Link href="/blog/multi-location-restaurant-cleaning-management" className="group flex h-full flex-col rounded-xl border border-slate-200 bg-white p-6 shadow-sm hover:shadow-md transition">
+              <span className="text-xs font-semibold text-primary uppercase tracking-wide">Multi-Location</span>
+              <h3 className="mt-2 text-lg font-semibold text-slate-900 group-hover:text-primary transition">
+                Managing Cleaning Across Multiple Restaurant Locations
+              </h3>
+              <p className="mt-2 text-sm text-slate-600 flex-grow">
+                Best practices for maintaining consistent cleaning standards across restaurant chains.
+              </p>
+              <div className="mt-4 text-sm text-slate-500">10 min read</div>
+            </Link>
+
+            <Link href="/blog/restaurant-kitchen-deep-cleaning-guide" className="group flex h-full flex-col rounded-xl border border-slate-200 bg-white p-6 shadow-sm hover:shadow-md transition">
+              <span className="text-xs font-semibold text-primary uppercase tracking-wide">Cleaning Guides</span>
+              <h3 className="mt-2 text-lg font-semibold text-slate-900 group-hover:text-primary transition">
+                Restaurant Kitchen Deep Cleaning: Complete Step-by-Step Guide
+              </h3>
+              <p className="mt-2 text-sm text-slate-600 flex-grow">
+                Professional guide to deep cleaning your commercial kitchen. Equipment, degreasing, and schedules.
+              </p>
+              <div className="mt-4 text-sm text-slate-500">12 min read</div>
+            </Link>
+          </div>
+
+          <div className="mt-8 text-center">
+            <Link href="/blog" className="inline-flex items-center text-sm font-semibold text-slate-900 underline-offset-4 hover:underline">
+              View all articles →
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section id="quote" className="py-20 bg-gradient-to-br from-primary to-secondary text-white">
         <div className="container-custom text-center">
@@ -390,5 +561,6 @@ export default function Home() {
         </div>
       </section>
     </main>
+    </>
   );
 }

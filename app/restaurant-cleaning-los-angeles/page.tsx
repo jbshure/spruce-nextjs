@@ -7,60 +7,47 @@ export const metadata: Metadata = {
   keywords: 'restaurant cleaning los angeles, restaurant cleaning services los angeles, commercial kitchen cleaning los angeles, restaurant deep cleaning los angeles, kitchen cleaning services los angeles, restaurant sanitization los angeles, commercial restaurant cleaning LA',
 };
 
+// Define FAQs once - single source of truth for schema and JSX
+const restaurantCleaningFaqs = [
+  {
+    question: "How much does restaurant cleaning cost in Los Angeles?",
+    answer: "Restaurant cleaning costs in Los Angeles typically range from $200-$800 per cleaning depending on square footage, service frequency, and scope of work. Nightly cleaning averages $300-500 per session for a typical 2,000-3,000 sq ft restaurant. Deep cleaning services run $800-1,500. Contact us for a free quote specific to your Los Angeles restaurant."
+  },
+  {
+    question: "Do you provide emergency restaurant cleaning in Los Angeles?",
+    answer: "Yes, we provide emergency restaurant cleaning services throughout Los Angeles County. If you fail a health inspection or have an urgent cleaning need, same-day service is often available for LA areas including Downtown LA, West Hollywood, Santa Monica, and the Valley (subject to crew availability). Contact us for fastest available response times."
+  },
+  {
+    question: "What areas of Los Angeles do you serve for restaurant cleaning?",
+    answer: "We provide restaurant cleaning services throughout Los Angeles County including Downtown LA, Hollywood, West Hollywood, Beverly Hills, Santa Monica, Venice, Culver City, Pasadena, Glendale, Burbank, the San Fernando Valley, and South Bay cities. We specialize in multi-location restaurant chains across LA."
+  },
+  {
+    question: "Are your cleaning products safe for commercial kitchens?",
+    answer: "Yes, all cleaning products we use are food-safe, EPA-registered, and approved for commercial kitchen use. We use hospital-grade disinfectants that are effective against bacteria and viruses while being safe for food contact surfaces. Our teams are trained in food safety protocols."
+  },
+  {
+    question: "Can you clean my restaurant during business hours?",
+    answer: "While we primarily provide after-hours restaurant cleaning in Los Angeles (typically between 11pm-6am), we can accommodate daytime cleaning for specific services like deep cleaning during your closure day. We work around your schedule to minimize disruption to your operations."
+  },
+  {
+    question: "Do you offer contracts or one-time cleaning for Los Angeles restaurants?",
+    answer: "We offer both recurring cleaning contracts (nightly, weekly, or custom schedules) and one-time deep cleaning services for Los Angeles restaurants. Most of our restaurant clients are on recurring schedules, but we also provide pre-opening cleaning, post-construction cleaning, and emergency one-time services."
+  }
+];
+
 export default function RestaurantCleaningLosAngeles() {
+  // Build FAQ schema from array
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How much does restaurant cleaning cost in Los Angeles?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Restaurant cleaning costs in Los Angeles typically range from $200-$800 per cleaning depending on square footage, service frequency, and scope of work. Nightly cleaning averages $300-500 per session for a typical 2,000-3,000 sq ft restaurant. Deep cleaning services run $800-1,500. Contact us for a free quote specific to your Los Angeles restaurant."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do you provide emergency restaurant cleaning in Los Angeles?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, we provide emergency restaurant cleaning services throughout Los Angeles County. If you fail a health inspection or have an urgent cleaning need, same-day service is often available for LA areas including Downtown LA, West Hollywood, Santa Monica, and the Valley (subject to crew availability). Contact us for fastest available response times."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What areas of Los Angeles do you serve for restaurant cleaning?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "We provide restaurant cleaning services throughout Los Angeles County including Downtown LA, Hollywood, West Hollywood, Beverly Hills, Santa Monica, Venice, Culver City, Pasadena, Glendale, Burbank, the San Fernando Valley, and South Bay cities. We specialize in multi-location restaurant chains across LA."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Are your cleaning products safe for commercial kitchens?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, all cleaning products we use are food-safe, EPA-registered, and approved for commercial kitchen use. We use hospital-grade disinfectants that are effective against bacteria and viruses while being safe for food contact surfaces. Our teams are trained in food safety protocols."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can you clean my restaurant during business hours?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "While we primarily provide after-hours restaurant cleaning in Los Angeles (typically between 11pm-6am), we can accommodate daytime cleaning for specific services like deep cleaning during your closure day. We work around your schedule to minimize disruption to your operations."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do you offer contracts or one-time cleaning for Los Angeles restaurants?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "We offer both recurring cleaning contracts (nightly, weekly, or custom schedules) and one-time deep cleaning services for Los Angeles restaurants. Most of our restaurant clients are on recurring schedules, but we also provide pre-opening cleaning, post-construction cleaning, and emergency one-time services."
-        }
+    "mainEntity": restaurantCleaningFaqs.map((faq) => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
       }
-    ]
+    }))
   };
 
   const localBusinessSchema = {
@@ -393,32 +380,7 @@ export default function RestaurantCleaningLosAngeles() {
           <h2 className="text-4xl font-bold text-center mb-12">Restaurant Cleaning Los Angeles - Frequently Asked Questions</h2>
 
           <div className="space-y-6">
-            {[
-              {
-                question: 'How much does restaurant cleaning cost in Los Angeles?',
-                answer: 'Restaurant cleaning costs in Los Angeles typically range from $200-$800 per cleaning depending on square footage, service frequency, and scope of work. Nightly cleaning averages $300-500 per session for a typical 2,000-3,000 sq ft restaurant. Deep cleaning services run $800-1,500. Contact us for a free quote specific to your Los Angeles restaurant.'
-              },
-              {
-                question: 'Do you provide emergency restaurant cleaning in Los Angeles?',
-                answer: 'Yes, we provide emergency restaurant cleaning services throughout Los Angeles County. If you fail a health inspection or have an urgent cleaning need, same-day service is often available for LA areas including Downtown LA, West Hollywood, Santa Monica, and the Valley (subject to crew availability). Contact us for fastest available response times.'
-              },
-              {
-                question: 'What areas of Los Angeles do you serve for restaurant cleaning?',
-                answer: 'We provide restaurant cleaning services throughout Los Angeles County including Downtown LA, Hollywood, West Hollywood, Beverly Hills, Santa Monica, Venice, Culver City, Pasadena, Glendale, Burbank, the San Fernando Valley, and South Bay cities. We specialize in multi-location restaurant chains across LA.'
-              },
-              {
-                question: 'Are your cleaning products safe for commercial kitchens?',
-                answer: 'Yes, all cleaning products we use are food-safe, EPA-registered, and approved for commercial kitchen use. We use hospital-grade disinfectants that are effective against bacteria and viruses while being safe for food contact surfaces. Our teams are trained in food safety protocols.'
-              },
-              {
-                question: 'Can you clean my restaurant during business hours?',
-                answer: 'While we primarily provide after-hours restaurant cleaning in Los Angeles (typically between 11pm-6am), we can accommodate daytime cleaning for specific services like deep cleaning during your closure day. We work around your schedule to minimize disruption to your operations.'
-              },
-              {
-                question: 'Do you offer contracts or one-time cleaning for Los Angeles restaurants?',
-                answer: 'We offer both recurring cleaning contracts (nightly, weekly, or custom schedules) and one-time deep cleaning services for Los Angeles restaurants. Most of our restaurant clients are on recurring schedules, but we also provide pre-opening cleaning, post-construction cleaning, and emergency one-time services.'
-              }
-            ].map((faq, idx) => (
+            {restaurantCleaningFaqs.map((faq, idx) => (
               <div key={idx} className="bg-gray-50 rounded-xl p-8 border-l-4 border-primary">
                 <h3 className="text-xl font-bold mb-3 text-gray-900">{faq.question}</h3>
                 <p className="text-gray-700 leading-relaxed">{faq.answer}</p>

@@ -228,6 +228,16 @@ export default function HealthInspectionChecklistPage() {
             <p className="text-gray-700 mb-6 leading-relaxed">
               Your inspection report will be posted publicly. Grade A (90-100 points) is ideal. Grade B (80-89) requires correction. Grade C (70-79) mandates immediate corrective action. If you receive violations, correct them immediately and request a re-inspection within 30 days.
             </p>
+
+            <div className="bg-primary/5 border border-primary/20 rounded-xl p-8 mt-8">
+              <h3 className="text-2xl font-bold mb-4 text-gray-900">Need help getting inspection-ready?</h3>
+              <p className="text-gray-700 mb-6">
+                Spruce provides comprehensive <Link href="/commercial-kitchen-cleaning" className="text-primary font-semibold hover:underline">commercial kitchen cleaning services</Link> across Los Angeles to help multi-location restaurants maintain consistent health inspection scores. Our teams are trained in LA County health code requirements.
+              </p>
+              <Link href="/#quote" className="inline-block bg-primary text-white px-6 py-3 rounded-xl font-semibold hover:bg-primary-dark transition">
+                Get a Free Quote
+              </Link>
+            </div>
           </div>
 
           {/* Related Articles */}
