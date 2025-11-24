@@ -33,7 +33,7 @@ export default function WestHollywoodPage() {
 
   return (
     <main>
-    <>
+
       <div className="bg-gray-50 border-b border-gray-200">
         <div className="container-custom py-4">
           <div className="flex items-center space-x-2 text-sm text-gray-600">

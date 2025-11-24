@@ -38,7 +38,7 @@ export default function CulverCityPage() {
 
   return (
     <main>
-    <>
+
       {/* Breadcrumbs */}
       <div className="bg-gray-50 border-b border-gray-200">
         <div className="container-custom py-4">
