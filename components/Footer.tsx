@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Footer() {
   return (
@@ -7,9 +8,15 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
-            <h3 className="text-xl font-bold mb-4">
-              <span className="text-accent">Hey</span> Spruce
-            </h3>
+            <Link href="/" className="inline-block mb-4">
+              <Image
+                src="/images/logo.png"
+                alt="Hey Spruce Logo"
+                width={150}
+                height={40}
+                className="h-8 w-auto"
+              />
+            </Link>
             <p className="text-gray-600 text-sm">
               The only facilities partner for multi-location restaurant chains in Los Angeles.
             </p>
