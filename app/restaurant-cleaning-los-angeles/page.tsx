@@ -25,7 +25,7 @@ export default function RestaurantCleaningLosAngeles() {
         "name": "Do you provide emergency restaurant cleaning in Los Angeles?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes, we provide emergency restaurant cleaning services throughout Los Angeles County. If you fail a health inspection or have an urgent cleaning need, we offer same-day service for most LA areas including Downtown LA, West Hollywood, Santa Monica, and the Valley. Contact us for fastest available response times."
+          "text": "Yes, we provide emergency restaurant cleaning services throughout Los Angeles County. If you fail a health inspection or have an urgent cleaning need, same-day service is often available for LA areas including Downtown LA, West Hollywood, Santa Monica, and the Valley (subject to crew availability). Contact us for fastest available response times."
         }
       },
       {
@@ -118,7 +118,7 @@ export default function RestaurantCleaningLosAngeles() {
   };
 
   return (
-    <>
+    <main>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
@@ -132,7 +132,7 @@ export default function RestaurantCleaningLosAngeles() {
       <section className="bg-gradient-to-br from-primary to-secondary text-white py-20">
         <div className="container-custom">
           <div className="text-sm text-white/80 mb-4">
-            <Link href="/" className="hover:text-white">Home</Link> / <Link href="#services" className="hover:text-white">Services</Link> / <span>Restaurant Cleaning Los Angeles</span>
+            <Link href="/" className="hover:text-white">Home</Link> / <span>Restaurant Cleaning Los Angeles</span>
           </div>
           <h1 className="text-5xl md:text-6xl font-extrabold mb-6 leading-tight">
             Restaurant Cleaning Services in Los Angeles, CA
@@ -141,11 +141,11 @@ export default function RestaurantCleaningLosAngeles() {
             Professional nightly cleaning, deep kitchen cleaning, and facilities management for multi-location restaurant chains across Los Angeles County.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <a href="#quote" className="bg-white text-primary px-8 py-4 rounded-2xl font-bold hover:bg-gray-100 transition text-center">
+            <a href="/#quote" className="bg-white text-primary px-8 py-4 rounded-2xl font-bold hover:bg-gray-100 transition text-center">
               Get a Free Quote
             </a>
-            <a href="tel:3235551234" className="bg-white/10 backdrop-blur-sm border-2 border-white text-white px-8 py-4 rounded-2xl font-bold hover:bg-white/20 transition text-center">
-              Call (323) 555-1234
+            <a href="tel:+13235551234" className="bg-white/10 backdrop-blur-sm border-2 border-white text-white px-8 py-4 rounded-2xl font-bold hover:bg-white/20 transition text-center">
+              Call (323) 555-1234 {/* TODO: Replace with real phone number */}
             </a>
           </div>
         </div>
@@ -212,7 +212,7 @@ export default function RestaurantCleaningLosAngeles() {
                   </li>
                 ))}
               </ul>
-              <Link href="/#quote" className="inline-block bg-primary text-white px-8 py-4 rounded-xl font-bold hover:bg-primary-dark transition">
+              <Link href="/contact" className="inline-block bg-primary text-white px-8 py-4 rounded-xl font-bold hover:bg-primary-dark transition">
                 Schedule Nightly Cleaning
               </Link>
             </div>
@@ -297,10 +297,10 @@ export default function RestaurantCleaningLosAngeles() {
           <h2 className="text-4xl font-bold mb-4">Get a Fast Quote for Restaurant Cleaning in Los Angeles</h2>
           <p className="text-xl mb-8">Join restaurant brands across LA that trust Spruce for complete facilities management.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <a href="#quote" className="bg-white text-primary px-8 py-4 rounded-2xl font-bold hover:bg-gray-100 transition">
+            <a href="/contact" className="bg-white text-primary px-8 py-4 rounded-2xl font-bold hover:bg-gray-100 transition">
               Get Free Quote
             </a>
-            <a href="tel:3235551234" className="bg-white/10 backdrop-blur-sm border-2 border-white text-white px-8 py-4 rounded-2xl font-bold hover:bg-white/20 transition">
+            <a href="tel:+13235551234" className="bg-white/10 backdrop-blur-sm border-2 border-white text-white px-8 py-4 rounded-2xl font-bold hover:bg-white/20 transition">
               Call (323) 555-1234
             </a>
           </div>
@@ -331,12 +331,12 @@ export default function RestaurantCleaningLosAngeles() {
               {
                 title: 'Los Angeles County Health Code Compliance',
                 description: 'We stay current with all LA County Department of Public Health requirements for restaurant sanitation and cleaning standards.',
-                features: ['Trained cleaning teams', 'Food-safe cleaning products only', 'Proper sanitizer concentrations verified', 'Temperature logging and documentation']
+                features: ['Trained cleaning teams', 'Food-safe cleaning products only', 'Proper sanitizer concentrations verified', 'Documentation with photos and checklists']
               },
               {
                 title: 'Emergency Cleaning for Violations',
-                description: 'Failed an inspection? We provide same-day emergency restaurant cleaning services in Los Angeles to address violations immediately.',
-                features: ['Fast emergency response in LA County', 'Same-day service available', 'Violation-specific cleaning protocols', 'Re-inspection preparation included']
+                description: 'Failed an inspection? We provide emergency restaurant cleaning services in Los Angeles to address violations quickly.',
+                features: ['Fast emergency response in LA County', 'Same-day service often available', 'Violation-specific cleaning protocols', 'Re-inspection preparation included']
               }
             ].map((item, idx) => (
               <div key={idx} className="bg-white rounded-2xl p-8 shadow-custom-md border border-gray-200">
@@ -381,7 +381,7 @@ export default function RestaurantCleaningLosAngeles() {
           </div>
 
           <div className="text-center">
-            <a href="tel:3235551234" className="inline-block bg-primary text-white px-10 py-5 rounded-2xl font-bold text-lg hover:bg-primary-dark transition">
+            <a href="tel:+13235551234" className="inline-block bg-primary text-white px-10 py-5 rounded-2xl font-bold text-lg hover:bg-primary-dark transition">
               Call Now for Restaurant Cleaning: (323) 555-1234
             </a>
           </div>
@@ -401,7 +401,7 @@ export default function RestaurantCleaningLosAngeles() {
               },
               {
                 question: 'Do you provide emergency restaurant cleaning in Los Angeles?',
-                answer: 'Yes, we provide emergency restaurant cleaning services throughout Los Angeles County. If you fail a health inspection or have an urgent cleaning need, we offer same-day service for most LA areas including Downtown LA, West Hollywood, Santa Monica, and the Valley. Contact us for fastest available response times.'
+                answer: 'Yes, we provide emergency restaurant cleaning services throughout Los Angeles County. If you fail a health inspection or have an urgent cleaning need, same-day service is often available for LA areas including Downtown LA, West Hollywood, Santa Monica, and the Valley (subject to crew availability). Contact us for fastest available response times.'
               },
               {
                 question: 'What areas of Los Angeles do you serve for restaurant cleaning?',
@@ -462,7 +462,7 @@ export default function RestaurantCleaningLosAngeles() {
 
           <div className="text-center mt-12">
             <p className="text-xl mb-6">See why restaurant brands in Los Angeles trust Spruce</p>
-            <Link href="/#quote" className="inline-block bg-white text-gray-900 px-10 py-5 rounded-2xl font-bold text-lg hover:bg-gray-100 transition">
+            <Link href="/contact" className="inline-block bg-white text-gray-900 px-10 py-5 rounded-2xl font-bold text-lg hover:bg-gray-100 transition">
               Schedule a Demo
             </Link>
           </div>
@@ -489,6 +489,6 @@ export default function RestaurantCleaningLosAngeles() {
           </div>
         </div>
       </section>
-    </>
+    </main>
   );
 }
