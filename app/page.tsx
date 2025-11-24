@@ -2,25 +2,26 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Script from 'next/script';
 
+// TODO: Replace legalName, streetAddress, postalCode with real values
+// TODO: Add Google Business Profile, Yelp, LinkedIn, Instagram to sameAs when available
 const spruceOrgSchema = {
   "@context": "https://schema.org",
   "@type": ["Organization", "LocalBusiness"],
   "name": "Spruce",
-  "legalName": "Spruce Facilities Management Inc.", // TODO: Replace with actual legal entity name
+  "legalName": "Spruce Facilities Management Inc.",
   "url": "https://www.heyspruce.com",
   "logo": "https://www.heyspruce.com/images/logo.png",
   "telephone": "+18772532646",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "1234 Example St, Suite 200", // TODO: Replace with real street address
+    "streetAddress": "1234 Example St, Suite 200",
     "addressLocality": "Los Angeles",
     "addressRegion": "CA",
-    "postalCode": "90001", // TODO: Replace with real postal code
+    "postalCode": "90001",
     "addressCountry": "US"
   },
   "sameAs": [
     "https://www.heyspruce.com"
-    // TODO: Add Google Business Profile, Yelp, LinkedIn, Instagram when available
   ]
 };
 
