@@ -36,6 +36,9 @@ export default function ROICalculator() {
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Based on data from 50+ multi-location restaurant chains, see how much you could save with Hey Spruce
           </p>
+          <p className="text-sm text-gray-500 mt-2">
+            Calculator uses the same ranges shown in the benchmark table below
+          </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-8 items-start">

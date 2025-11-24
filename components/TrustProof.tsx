@@ -138,12 +138,14 @@ export default function TrustProof() {
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-gray-50 rounded-2xl p-8 border border-gray-200">
               <div className="flex items-center mb-4">
-                <div className="w-16 h-16 bg-primary rounded-xl flex items-center justify-center text-white font-bold text-2xl mr-4">
-                  FC
+                <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mr-4">
+                  <svg className="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                  </svg>
                 </div>
                 <div>
-                  <div className="font-bold text-lg">Fast Casual Chain</div>
-                  <div className="text-sm text-gray-600">28 locations • SoCal</div>
+                  <div className="font-bold text-lg">Fast-Casual Concept</div>
+                  <div className="text-sm text-gray-600">28 locations • Southern California</div>
                 </div>
               </div>
               <p className="text-gray-700 mb-4 italic">
@@ -167,12 +169,14 @@ export default function TrustProof() {
 
             <div className="bg-gray-50 rounded-2xl p-8 border border-gray-200">
               <div className="flex items-center mb-4">
-                <div className="w-16 h-16 bg-secondary rounded-xl flex items-center justify-center text-white font-bold text-2xl mr-4">
-                  QS
+                <div className="w-16 h-16 bg-secondary/10 rounded-xl flex items-center justify-center mr-4">
+                  <svg className="w-8 h-8 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7" />
+                  </svg>
                 </div>
                 <div>
-                  <div className="font-bold text-lg">QSR Franchise Group</div>
-                  <div className="text-sm text-gray-600">47 locations • National</div>
+                  <div className="font-bold text-lg">Quick-Service Franchise Group</div>
+                  <div className="text-sm text-gray-600">47 locations • National footprint</div>
                 </div>
               </div>
               <p className="text-gray-700 mb-4 italic">
@@ -196,12 +200,14 @@ export default function TrustProof() {
 
             <div className="bg-gray-50 rounded-2xl p-8 border border-gray-200">
               <div className="flex items-center mb-4">
-                <div className="w-16 h-16 bg-green-600 rounded-xl flex items-center justify-center text-white font-bold text-2xl mr-4">
-                  FD
+                <div className="w-16 h-16 bg-green-100 rounded-xl flex items-center justify-center mr-4">
+                  <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                  </svg>
                 </div>
                 <div>
-                  <div className="font-bold text-lg">Fine Dining Group</div>
-                  <div className="text-sm text-gray-600">12 locations • LA Metro</div>
+                  <div className="font-bold text-lg">Full-Service Restaurant Group</div>
+                  <div className="text-sm text-gray-600">12 locations • LA Metro Area</div>
                 </div>
               </div>
               <p className="text-gray-700 mb-4 italic">

@@ -30,7 +30,10 @@ export default function HomePageClient() {
               The Only Facilities Partner for Multi-Location Restaurant Chains
             </h1>
             <p className="text-xl text-white/90 mb-4">
-              One platform. One partner. Complete facilities management for growing restaurant brands across Los Angeles.
+              One platform. One partner. Complete facilities management for growing restaurant brands across Los Angeles and Southern California.
+            </p>
+            <p className="text-lg text-white/80 mb-2">
+              Serving LA Metro, Orange County, Inland Empire, and select multi-state groups
             </p>
             <p className="text-2xl text-white font-medium mb-8">
               Cleaning + Preventive Maintenance + Repairs + Vendor Management
@@ -222,7 +225,7 @@ export default function HomePageClient() {
                 </li>
               </ul>
 
-              <div className="mt-8">
+              <div className="mt-8 space-y-3">
                 <button
                   onClick={() => {
                     setIsQuoteModalOpen(true);
@@ -237,6 +240,10 @@ export default function HomePageClient() {
                 >
                   See how the platform works
                 </button>
+                <p className="text-sm text-slate-600">
+                  Platform starts at $0/location for basic tracking, $49-99/location for full automation.
+                  <a href="#pricing" className="text-primary hover:underline ml-1">See all pricing →</a>
+                </p>
               </div>
             </div>
 
