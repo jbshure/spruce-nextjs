@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Script from 'next/script';
 
 export const metadata: Metadata = {
   alternates: {
@@ -11,8 +12,41 @@ export const metadata: Metadata = {
 };
 
 export default function CommercialKitchenCleaning() {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.heyspruce.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Services",
+        "item": "https://www.heyspruce.com/#services"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Commercial Kitchen Cleaning",
+        "item": "https://www.heyspruce.com/commercial-kitchen-cleaning"
+      }
+    ]
+  };
+
   return (
     <>
+      <Script
+        id="breadcrumb-schema"
+        type="application/ld+json"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema)
+        }}
+      />
       {/* Hero */}
       <section className="bg-gradient-to-br from-primary to-secondary text-white py-20">
         <div className="container-custom">

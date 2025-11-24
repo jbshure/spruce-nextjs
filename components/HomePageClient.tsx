@@ -18,7 +18,7 @@ export default function HomePageClient() {
         <div className="absolute inset-0">
           <Image
             src="/images/hero-1.webp"
-            alt="Professional restaurant kitchen cleaning services"
+            alt="Professional restaurant cleaning and facilities management services in Los Angeles"
             fill
             className="object-cover opacity-25"
             priority
