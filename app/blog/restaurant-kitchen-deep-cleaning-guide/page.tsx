@@ -373,7 +373,7 @@ export default function RestaurantKitchenDeepCleaningPage() {
                 <Link href="/#quote" className="bg-primary text-white px-8 py-4 rounded-xl font-bold hover:bg-primary-dark transition text-center">
                   Schedule Deep Cleaning
                 </Link>
-                <a href="tel:3235551234" className="bg-white text-primary border-2 border-primary px-8 py-4 rounded-xl font-bold hover:bg-gray-50 transition text-center">
+                <a href="tel:+18772532646" className="bg-white text-primary border-2 border-primary px-8 py-4 rounded-xl font-bold hover:bg-gray-50 transition text-center">
                   Call 1-877-CLEANING
                 </a>
               </div>

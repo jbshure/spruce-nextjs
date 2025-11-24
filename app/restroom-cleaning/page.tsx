@@ -16,7 +16,7 @@ export default function RestroomCleaning() {
           <p className="text-xl mb-8 text-white/90 max-w-4xl">Your restrooms say a lot about your restaurant. Spruce provides professional restroom cleaning in Los Angeles that keeps guest and staff restrooms fresh, stocked, and sanitary.</p>
           <div className="flex gap-4">
             <a href="#quote" className="bg-white text-primary px-8 py-4 rounded-2xl font-bold hover:bg-gray-100 transition">Get Restroom Cleaning Quote</a>
-            <a href="tel:3235551234" className="bg-white/10 border-2 border-white text-white px-8 py-4 rounded-2xl font-bold hover:bg-white/20 transition">Call 1-877-CLEANING</a>
+            <a href="tel:+18772532646" className="bg-white/10 border-2 border-white text-white px-8 py-4 rounded-2xl font-bold hover:bg-white/20 transition">Call 1-877-CLEANING</a>
           </div>
         </div>
       </section>

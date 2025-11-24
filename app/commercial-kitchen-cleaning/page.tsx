@@ -26,7 +26,7 @@ export default function CommercialKitchenCleaning() {
             <a href="#quote" className="bg-white text-primary px-8 py-4 rounded-2xl font-bold hover:bg-gray-100 transition text-center">
               Schedule a Kitchen Assessment
             </a>
-            <a href="tel:3235551234" className="bg-white/10 backdrop-blur-sm border-2 border-white text-white px-8 py-4 rounded-2xl font-bold hover:bg-white/20 transition text-center">
+            <a href="tel:+18772532646" className="bg-white/10 backdrop-blur-sm border-2 border-white text-white px-8 py-4 rounded-2xl font-bold hover:bg-white/20 transition text-center">
               Call 1-877-CLEANING
             </a>
           </div>
@@ -129,7 +129,7 @@ export default function CommercialKitchenCleaning() {
             <a href="#quote" className="bg-white text-primary px-8 py-4 rounded-2xl font-bold hover:bg-gray-100 transition">
               Talk to Spruce Kitchen Ops
             </a>
-            <a href="tel:3235551234" className="bg-white/10 backdrop-blur-sm border-2 border-white text-white px-8 py-4 rounded-2xl font-bold hover:bg-white/20 transition">
+            <a href="tel:+18772532646" className="bg-white/10 backdrop-blur-sm border-2 border-white text-white px-8 py-4 rounded-2xl font-bold hover:bg-white/20 transition">
               Call 1-877-CLEANING
             </a>
           </div>

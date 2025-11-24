@@ -70,7 +70,7 @@ export default function Header() {
 
           {/* CTA Buttons */}
           <div className="hidden lg:flex items-center space-x-4">
-            <a href="tel:3235551234" className="text-white hover:text-white/80 font-semibold transition">
+            <a href="tel:+18772532646" className="text-white hover:text-white/80 font-semibold transition">
               1-877-CLEANING
             </a>
             <Link
@@ -117,7 +117,7 @@ export default function Header() {
               <Link href="/#pricing" className="text-white hover:text-white/80 py-2">
                 Pricing
               </Link>
-              <a href="tel:3235551234" className="text-white hover:text-white/80 py-2 font-semibold">
+              <a href="tel:+18772532646" className="text-white hover:text-white/80 py-2 font-semibold">
                 Call 1-877-CLEANING
               </a>
               <Link href="/#quote" className="text-white hover:text-white/80 py-2">

@@ -38,7 +38,7 @@ export default function Contact() {
               <div className="space-y-6">
                 <div>
                   <h3 className="font-semibold text-lg mb-2">Phone</h3>
-                  <a href="tel:3235551234" className="text-primary text-xl hover:underline">
+                  <a href="tel:+18772532646" className="text-primary text-xl hover:underline">
                     1-877-CLEANING
                   </a>
                 </div>
@@ -198,7 +198,7 @@ export default function Contact() {
             Our team is available to discuss your facilities management needs
           </p>
           <a
-            href="tel:3235551234"
+            href="tel:+18772532646"
             className="inline-block bg-primary text-white px-10 py-5 rounded-2xl font-bold text-lg hover:bg-primary-dark transition"
           >
             Call 1-877-CLEANING

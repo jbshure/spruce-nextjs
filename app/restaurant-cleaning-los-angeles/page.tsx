@@ -65,19 +65,19 @@ export default function RestaurantCleaningLosAngeles() {
 
   const localBusinessSchema = {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Hey Spruce Restaurant Cleaning Los Angeles",
+    "@type": ["LocalBusiness", "CleaningService"],
+    "name": "Spruce – Restaurant Cleaning & Facilities Management",
     "image": "https://www.heyspruce.com/images/logo.png",
-    "@id": "https://www.heyspruce.com",
-    "url": "https://www.heyspruce.com",
-    "telephone": "1-877-CLEANING",
+    "@id": "https://www.heyspruce.com/#restaurant-cleaning-los-angeles",
+    "url": "https://www.heyspruce.com/restaurant-cleaning-los-angeles",
+    "telephone": "+18772532646",
     "priceRange": "$$",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Los Angeles",
+      "streetAddress": "1234 Example St, Suite 200", // TODO: Replace with real street address
       "addressLocality": "Los Angeles",
       "addressRegion": "CA",
-      "postalCode": "90001",
+      "postalCode": "90001", // TODO: Replace with real postal code
       "addressCountry": "US"
     },
     "geo": {
@@ -85,36 +85,35 @@ export default function RestaurantCleaningLosAngeles() {
       "latitude": 34.0522,
       "longitude": -118.2437
     },
-    "openingHoursSpecification": {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": [
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
-        "Saturday",
-        "Sunday"
-      ],
-      "opens": "00:00",
-      "closes": "23:59"
-    },
+    "areaServed": [
+      { "@type": "City", "name": "Los Angeles" },
+      { "@type": "City", "name": "Santa Monica" },
+      { "@type": "City", "name": "Burbank" },
+      { "@type": "City", "name": "Pasadena" },
+      { "@type": "City", "name": "Glendale" },
+      { "@type": "City", "name": "Beverly Hills" },
+      { "@type": "City", "name": "Culver City" },
+      { "@type": "City", "name": "Venice" },
+      { "@type": "City", "name": "West Hollywood" }
+    ],
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "08:00",
+        "closes": "18:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Saturday", "Sunday"],
+        "opens": "09:00",
+        "closes": "16:00"
+      }
+    ],
     "sameAs": [
       "https://www.heyspruce.com"
-    ],
-    "areaServed": {
-      "@type": "City",
-      "name": "Los Angeles"
-    },
-    "serviceArea": {
-      "@type": "GeoCircle",
-      "geoMidpoint": {
-        "@type": "GeoCoordinates",
-        "latitude": 34.0522,
-        "longitude": -118.2437
-      },
-      "geoRadius": "50000"
-    }
+      // TODO: Add Google Business Profile, Yelp, LinkedIn when available
+    ]
   };
 
   return (
