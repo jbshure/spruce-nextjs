@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Restaurant Cleaning Los Angeles | #1 Commercial Kitchen Cleaning Services LA | Hey Spruce',
-  description: 'Restaurant cleaning services Los Angeles - Serving LA restaurant chains and multi-location brands. Nightly cleaning, deep kitchen cleaning, hood cleaning coordination. Health inspection support. Fast emergency response. Call (323) 555-1234.',
+  description: 'Restaurant cleaning services Los Angeles - Serving LA restaurant chains and multi-location brands. Nightly cleaning, deep kitchen cleaning, hood cleaning coordination. Health inspection support. Fast emergency response. Call 1-877-CLEANING.',
   keywords: 'restaurant cleaning los angeles, restaurant cleaning services los angeles, commercial kitchen cleaning los angeles, restaurant deep cleaning los angeles, kitchen cleaning services los angeles, restaurant sanitization los angeles, commercial restaurant cleaning LA',
 };
 
@@ -70,7 +70,7 @@ export default function RestaurantCleaningLosAngeles() {
     "image": "https://www.heyspruce.com/images/logo.png",
     "@id": "https://www.heyspruce.com",
     "url": "https://www.heyspruce.com",
-    "telephone": "(323) 555-1234",
+    "telephone": "1-877-CLEANING",
     "priceRange": "$$",
     "address": {
       "@type": "PostalAddress",
@@ -144,8 +144,8 @@ export default function RestaurantCleaningLosAngeles() {
             <a href="/#quote" className="bg-white text-primary px-8 py-4 rounded-2xl font-bold hover:bg-gray-100 transition text-center">
               Get a Free Quote
             </a>
-            <a href="tel:+13235551234" className="bg-white/10 backdrop-blur-sm border-2 border-white text-white px-8 py-4 rounded-2xl font-bold hover:bg-white/20 transition text-center">
-              Call (323) 555-1234 {/* TODO: Replace with real phone number */}
+            <a href="tel:+18772532646" className="bg-white/10 backdrop-blur-sm border-2 border-white text-white px-8 py-4 rounded-2xl font-bold hover:bg-white/20 transition text-center">
+              Call 1-877-CLEANING {/* TODO: Replace with real phone number */}
             </a>
           </div>
         </div>
@@ -300,8 +300,8 @@ export default function RestaurantCleaningLosAngeles() {
             <a href="/contact" className="bg-white text-primary px-8 py-4 rounded-2xl font-bold hover:bg-gray-100 transition">
               Get Free Quote
             </a>
-            <a href="tel:+13235551234" className="bg-white/10 backdrop-blur-sm border-2 border-white text-white px-8 py-4 rounded-2xl font-bold hover:bg-white/20 transition">
-              Call (323) 555-1234
+            <a href="tel:+18772532646" className="bg-white/10 backdrop-blur-sm border-2 border-white text-white px-8 py-4 rounded-2xl font-bold hover:bg-white/20 transition">
+              Call 1-877-CLEANING
             </a>
           </div>
           <div className="flex flex-wrap justify-center gap-6 text-sm">
@@ -381,8 +381,8 @@ export default function RestaurantCleaningLosAngeles() {
           </div>
 
           <div className="text-center">
-            <a href="tel:+13235551234" className="inline-block bg-primary text-white px-10 py-5 rounded-2xl font-bold text-lg hover:bg-primary-dark transition">
-              Call Now for Restaurant Cleaning: (323) 555-1234
+            <a href="tel:+18772532646" className="inline-block bg-primary text-white px-10 py-5 rounded-2xl font-bold text-lg hover:bg-primary-dark transition">
+              Call Now for Restaurant Cleaning: 1-877-CLEANING
             </a>
           </div>
         </div>

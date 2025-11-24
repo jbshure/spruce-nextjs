@@ -22,7 +22,7 @@ export default function NightlyCleaning() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <a href="#quote" className="bg-white text-primary px-8 py-4 rounded-2xl font-bold hover:bg-gray-100 transition text-center">Start Nightly Cleaning Program</a>
-            <a href="tel:3235551234" className="bg-white/10 backdrop-blur-sm border-2 border-white text-white px-8 py-4 rounded-2xl font-bold hover:bg-white/20 transition text-center">Call (323) 555-1234</a>
+            <a href="tel:3235551234" className="bg-white/10 backdrop-blur-sm border-2 border-white text-white px-8 py-4 rounded-2xl font-bold hover:bg-white/20 transition text-center">Call 1-877-CLEANING</a>
           </div>
         </div>
       </section>

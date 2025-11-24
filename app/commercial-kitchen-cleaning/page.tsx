@@ -27,7 +27,7 @@ export default function CommercialKitchenCleaning() {
               Schedule a Kitchen Assessment
             </a>
             <a href="tel:3235551234" className="bg-white/10 backdrop-blur-sm border-2 border-white text-white px-8 py-4 rounded-2xl font-bold hover:bg-white/20 transition text-center">
-              Call (323) 555-1234
+              Call 1-877-CLEANING
             </a>
           </div>
         </div>
@@ -130,7 +130,7 @@ export default function CommercialKitchenCleaning() {
               Talk to Spruce Kitchen Ops
             </a>
             <a href="tel:3235551234" className="bg-white/10 backdrop-blur-sm border-2 border-white text-white px-8 py-4 rounded-2xl font-bold hover:bg-white/20 transition">
-              Call (323) 555-1234
+              Call 1-877-CLEANING
             </a>
           </div>
         </div>

@@ -240,7 +240,7 @@ export default function MultiLocationCleaningPage() {
                   Request Multi-Location Quote
                 </Link>
                 <a href="tel:3235551234" className="bg-white text-primary border-2 border-primary px-8 py-4 rounded-xl font-bold hover:bg-gray-50 transition text-center">
-                  Call (323) 555-1234
+                  Call 1-877-CLEANING
                 </a>
               </div>
             </div>

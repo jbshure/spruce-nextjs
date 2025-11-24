@@ -68,8 +68,8 @@ export default function WestHollywoodPage() {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4">
-            <a href="tel:+13235551234" className="bg-white text-primary px-8 py-4 rounded-2xl font-bold text-lg hover:bg-gray-100 transition text-center">
-              Call for WeHo Service: (323) 555-1234
+            <a href="tel:+18772532646" className="bg-white text-primary px-8 py-4 rounded-2xl font-bold text-lg hover:bg-gray-100 transition text-center">
+              Call for WeHo Service: 1-877-CLEANING
             </a>
             <Link href="/#quote" className="bg-white/10 backdrop-blur-sm border-2 border-white text-white px-8 py-4 rounded-2xl font-bold text-lg hover:bg-white/20 transition text-center">
               Get Free Quote
@@ -136,8 +136,8 @@ export default function WestHollywoodPage() {
           <h2 className="text-4xl font-bold mb-4">Ready to Clean Your West Hollywood Restaurant?</h2>
           <p className="text-xl mb-8 text-white/90">Join 300+ WeHo establishments that trust Hey Spruce</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:+13235551234" className="bg-white text-primary px-8 py-4 rounded-2xl font-bold text-lg hover:bg-gray-100 transition">
-              Call (323) 555-1234
+            <a href="tel:+18772532646" className="bg-white text-primary px-8 py-4 rounded-2xl font-bold text-lg hover:bg-gray-100 transition">
+              Call 1-877-CLEANING
             </a>
             <Link href="/#quote" className="bg-white/10 backdrop-blur-sm border-2 border-white text-white px-8 py-4 rounded-2xl font-bold text-lg hover:bg-white/20 transition">
               Get Free Quote

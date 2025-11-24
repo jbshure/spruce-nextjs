@@ -41,7 +41,7 @@ export default function Footer() {
             <h4 className="font-semibold mb-4">Contact</h4>
             <ul className="space-y-2 text-sm text-gray-600">
               <li>📍 Los Angeles, CA</li>
-              <li>📞 <a href="tel:3235551234" className="hover:text-primary">(323) 555-1234</a></li>
+              <li>📞 <a href="tel:3235551234" className="hover:text-primary">1-877-CLEANING</a></li>
               <li>✉️ <a href="mailto:info@heyspruce.com" className="hover:text-primary">info@heyspruce.com</a></li>
             </ul>
           </div>

@@ -71,7 +71,7 @@ export default function Header() {
           {/* CTA Buttons */}
           <div className="hidden lg:flex items-center space-x-4">
             <a href="tel:3235551234" className="text-white hover:text-white/80 font-semibold transition">
-              (323) 555-1234
+              1-877-CLEANING
             </a>
             <Link
               href="/#quote"
@@ -118,7 +118,7 @@ export default function Header() {
                 Pricing
               </Link>
               <a href="tel:3235551234" className="text-white hover:text-white/80 py-2 font-semibold">
-                Call (323) 555-1234
+                Call 1-877-CLEANING
               </a>
               <Link href="/#quote" className="text-white hover:text-white/80 py-2">
                 Get a Quote

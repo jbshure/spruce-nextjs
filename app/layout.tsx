@@ -68,7 +68,7 @@ export default function RootLayout({
     "image": "https://www.heyspruce.com/images/logo.png",
     "@id": "https://www.heyspruce.com",
     "url": "https://www.heyspruce.com",
-    "telephone": "323-555-1234",
+    "telephone": "1-877-253-2646",
     "priceRange": "$$",
     "address": {
       "@type": "PostalAddress",

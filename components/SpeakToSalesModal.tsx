@@ -101,7 +101,7 @@ export default function SpeakToSalesModal({ isOpen, onClose }: SpeakToSalesModal
                 value={formData.phone}
                 onChange={handleChange}
                 className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition"
-                placeholder="(323) 555-1234"
+                placeholder="1-877-CLEANING"
               />
             </div>
 
