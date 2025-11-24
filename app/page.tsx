@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export default function Home() {
   return (
-    <>
+    <main>
       {/* Hero Section */}
       <section className="relative min-h-[70vh] bg-gradient-to-br from-primary via-primary-dark to-secondary flex items-center overflow-hidden">
         <div className="absolute inset-0">
@@ -383,12 +383,12 @@ export default function Home() {
             <a href="tel:3235551234" className="bg-white text-primary px-8 py-4 rounded-2xl font-bold text-lg hover:bg-gray-100 transition">
               Call (323) 555-1234
             </a>
-            <Link href="/#quote" className="bg-white/10 backdrop-blur-sm border-2 border-white text-white px-8 py-4 rounded-2xl font-bold text-lg hover:bg-white/20 transition">
-              Get Free Quote
+            <Link href="/contact" className="bg-white/10 backdrop-blur-sm border-2 border-white text-white px-8 py-4 rounded-2xl font-bold text-lg hover:bg-white/20 transition">
+              Fill Out Quote Form
             </Link>
           </div>
         </div>
       </section>
-    </>
+    </main>
   );
 }
