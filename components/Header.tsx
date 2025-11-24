@@ -43,28 +43,28 @@ export default function Header() {
                     Restaurant Cleaning
                   </Link>
                   <Link href="/commercial-kitchen-cleaning" className="block px-4 py-2 hover:bg-gray-100 text-gray-800">
-                    Kitchen Cleaning
+                    Kitchen Deep Cleaning
+                  </Link>
+                  <Link href="/nightly-cleaning" className="block px-4 py-2 hover:bg-gray-100 text-gray-800">
+                    Nightly Cleaning
                   </Link>
                   <Link href="/preventive-maintenance" className="block px-4 py-2 hover:bg-gray-100 text-gray-800">
                     Preventive Maintenance
                   </Link>
                   <Link href="/vendor-management" className="block px-4 py-2 hover:bg-gray-100 text-gray-800">
-                    Vendor Management
+                    Vendor Coordination
+                  </Link>
+                  <Link href="/hood-exhaust-cleaning" className="block px-4 py-2 hover:bg-gray-100 text-gray-800">
+                    Hood & Exhaust
                   </Link>
                 </div>
               )}
             </div>
+            <Link href="/#roi-calculator" className="text-white hover:text-white/80 font-medium transition">
+              ROI Calculator
+            </Link>
             <Link href="/#platform" className="text-white hover:text-white/80 font-medium transition">
               Dashboard
-            </Link>
-            <Link href="/#case-studies" className="text-white hover:text-white/80 font-medium transition">
-              Case Studies
-            </Link>
-            <Link href="/#pricing" className="text-white hover:text-white/80 font-medium transition">
-              Pricing
-            </Link>
-            <Link href="/#about" className="text-white hover:text-white/80 font-medium transition">
-              About
             </Link>
           </div>
 
@@ -106,16 +106,22 @@ export default function Header() {
                 Restaurant Cleaning
               </Link>
               <Link href="/commercial-kitchen-cleaning" className="text-white hover:text-white/80 py-2">
-                Kitchen Cleaning
+                Kitchen Deep Cleaning
+              </Link>
+              <Link href="/nightly-cleaning" className="text-white hover:text-white/80 py-2">
+                Nightly Cleaning
               </Link>
               <Link href="/preventive-maintenance" className="text-white hover:text-white/80 py-2">
                 Preventive Maintenance
               </Link>
+              <Link href="/vendor-management" className="text-white hover:text-white/80 py-2">
+                Vendor Coordination
+              </Link>
+              <Link href="/#roi-calculator" className="text-white hover:text-white/80 py-2">
+                ROI Calculator
+              </Link>
               <Link href="/#platform" className="text-white hover:text-white/80 py-2">
                 Dashboard
-              </Link>
-              <Link href="/#pricing" className="text-white hover:text-white/80 py-2">
-                Pricing
               </Link>
               <a href="tel:+18772532646" className="text-white hover:text-white/80 py-2 font-semibold">
                 Call 1-877-CLEANING
