@@ -56,9 +56,6 @@ export const metadata: Metadata = {
     description: "LA's #1 restaurant cleaning service. 24/7 emergency cleaning, 100% health inspection pass rate.",
     images: ["https://www.heyspruce.com/images/twitter-card.jpg"],
   },
-  alternates: {
-    canonical: "https://www.heyspruce.com",
-  },
 };
 
 export default function RootLayout({
