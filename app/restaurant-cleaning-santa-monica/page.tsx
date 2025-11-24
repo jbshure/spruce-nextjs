@@ -1,11 +1,14 @@
 import Link from 'next/link';
+import Script from 'next/script';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   alternates: {
     canonical: '/restaurant-cleaning-santa-monica',
   },
-  title: 'Restaurant Cleaning Santa Monica | Beach-Side Commercial Kitchen Cleaning | Hey Spruce',
+  title: 'Restaurant Cleaning Santa Monica | Commercial Kitchen',
   description: 'Restaurant cleaning Santa Monica - Serving Third Street Promenade, Main Street, Ocean Avenue restaurants. Beach-side dining specialists. Professional kitchen cleaning for Santa Monica pier establishments.',
   keywords: 'restaurant cleaning santa monica, santa monica restaurant cleaning, third street promenade restaurant cleaning, beach restaurant cleaning santa monica, commercial kitchen cleaning santa monica',
   openGraph: {
@@ -16,6 +19,49 @@ export const metadata: Metadata = {
 };
 
 export default function SantaMonicaPage() {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.heyspruce.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Restaurant Cleaning Santa Monica",
+        "item": "https://www.heyspruce.com/restaurant-cleaning-santa-monica"
+      }
+    ]
+  };
+
+  const localBusinessSchema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Spruce Restaurant Cleaning - Santa Monica",
+    "image": "https://www.heyspruce.com/images/logo.png",
+    "telephone": "+18772532646",
+    "priceRange": "$$-$$$",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Santa Monica",
+      "addressRegion": "CA",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 34.0195,
+      "longitude": -118.4912
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": "Santa Monica"
+    }
+  };
+
   const serviceAreas = [
     {
       title: 'Third Street Promenade Restaurant Cleaning',
@@ -40,7 +86,25 @@ export default function SantaMonicaPage() {
   ];
 
   return (
-    <main>
+    <>
+      <Script
+        id="breadcrumb-schema"
+        type="application/ld+json"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema)
+        }}
+      />
+      <Script
+        id="local-business-schema"
+        type="application/ld+json"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(localBusinessSchema)
+        }}
+      />
+      <Header />
+      <main>
 
       {/* Breadcrumbs */}
       <div className="bg-gray-50 border-b border-gray-200">
@@ -143,6 +207,81 @@ export default function SantaMonicaPage() {
         </div>
       </section>
 
+      {/* Pricing */}
+      <section className="py-20 bg-white">
+        <div className="container-custom">
+          <h2 className="text-3xl font-bold mb-12 text-center">Santa Monica Restaurant Cleaning Pricing</h2>
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-gray-50 rounded-2xl p-8 border border-gray-200">
+              <div className="space-y-6">
+                <div className="flex justify-between items-center pb-4 border-b border-gray-300">
+                  <div>
+                    <div className="font-bold text-lg">Nightly Cleaning (FOH + BOH)</div>
+                    <div className="text-sm text-gray-600">5-7 nights per week</div>
+                  </div>
+                  <div className="font-bold text-xl text-primary">$800-$2,200/mo</div>
+                </div>
+                <div className="flex justify-between items-center pb-4 border-b border-gray-300">
+                  <div>
+                    <div className="font-bold text-lg">Deep Kitchen Cleaning</div>
+                    <div className="text-sm text-gray-600">Quarterly service</div>
+                  </div>
+                  <div className="font-bold text-xl text-primary">$2,000-$5,000/visit</div>
+                </div>
+                <div className="flex justify-between items-center">
+                  <div>
+                    <div className="font-bold text-lg">Hood & Exhaust Cleaning</div>
+                    <div className="text-sm text-gray-600">NFPA 96 compliant</div>
+                  </div>
+                  <div className="font-bold text-xl text-primary">$450-$900/visit</div>
+                </div>
+              </div>
+              <div className="mt-8 pt-6 border-t border-gray-300 text-center">
+                <p className="text-gray-700 mb-4">
+                  <strong>Multi-location discount:</strong> Save 20-30% when you have 3+ locations
+                </p>
+                <Link href="/#quote" className="inline-block bg-primary text-white px-6 py-3 rounded-xl font-bold hover:bg-primary/90 transition">
+                  Get Custom Quote
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-20 bg-gray-50">
+        <div className="container-custom max-w-4xl">
+          <h2 className="text-3xl font-bold mb-12 text-center">Frequently Asked Questions</h2>
+          <div className="space-y-6">
+            <div className="bg-white rounded-2xl p-8 shadow-custom-sm">
+              <h3 className="text-xl font-bold mb-3">How much does restaurant cleaning cost in Santa Monica?</h3>
+              <p className="text-gray-700">
+                Nightly cleaning for Santa Monica restaurants typically ranges from $800-$2,200 per month depending on size, frequency, and service scope. Deep kitchen cleaning runs $2,000-$5,000 per quarterly visit. Multi-location chains save 20-30% with volume pricing.
+              </p>
+            </div>
+            <div className="bg-white rounded-2xl p-8 shadow-custom-sm">
+              <h3 className="text-xl font-bold mb-3">Do you clean beach-side restaurants and outdoor dining areas?</h3>
+              <p className="text-gray-700">
+                Absolutely. We specialize in coastal restaurant cleaning including outdoor patios, sidewalk cafes, and beach-front dining areas. Our teams understand the unique challenges of salt air, sand, and ocean moisture that affect Santa Monica restaurants.
+              </p>
+            </div>
+            <div className="bg-white rounded-2xl p-8 shadow-custom-sm">
+              <h3 className="text-xl font-bold mb-3">Can you handle high-volume tourist area restaurants?</h3>
+              <p className="text-gray-700">
+                Yes. Many of our Santa Monica clients are high-traffic establishments on Third Street Promenade, the Pier, and Main Street. We provide efficient cleaning services with quick turnarounds perfect for busy tourist destinations.
+              </p>
+            </div>
+            <div className="bg-white rounded-2xl p-8 shadow-custom-sm">
+              <h3 className="text-xl font-bold mb-3">How quickly can you start service?</h3>
+              <p className="text-gray-700">
+                For new clients, we typically start within 1-2 weeks. This includes site visit, customized checklist creation, crew assignment, and dashboard setup. Emergency cleaning can start within 24-48 hours.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-20 bg-gradient-to-br from-primary to-secondary text-white">
         <div className="container-custom text-center">
@@ -177,5 +316,7 @@ export default function SantaMonicaPage() {
         </div>
       </section>
     </main>
+    <Footer />
+    </>
   );
 }

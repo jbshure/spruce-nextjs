@@ -1,21 +1,67 @@
 import Link from 'next/link';
+import Script from 'next/script';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   alternates: {
     canonical: '/restaurant-cleaning-beverly-hills',
   },
-  title: 'Restaurant Cleaning Beverly Hills | Luxury Commercial Kitchen Cleaning | Hey Spruce',
-  description: 'Restaurant cleaning Beverly Hills - Serving Rodeo Drive, Canon Drive, and Wilshire Blvd luxury restaurants. High-end establishment specialists. Professional kitchen cleaning for celebrity dining venues.',
+  title: 'Restaurant Cleaning Beverly Hills | Commercial Kitchen Cleaning Services',
+  description: 'Professional restaurant cleaning services in Beverly Hills. Nightly cleaning, deep kitchen cleaning, hood exhaust, and facilities management for luxury restaurants. Call 1-877-CLEANING.',
   keywords: 'restaurant cleaning beverly hills, beverly hills restaurant cleaning, rodeo drive restaurant cleaning, luxury restaurant cleaning beverly hills, commercial kitchen cleaning beverly hills',
   openGraph: {
-    title: 'Restaurant Cleaning Beverly Hills | Luxury Commercial Kitchen Cleaning',
+    title: 'Restaurant Cleaning Beverly Hills | Commercial Kitchen Cleaning',
     description: 'Professional restaurant cleaning in Beverly Hills. Serving luxury restaurants, high-end establishments, and celebrity dining venues.',
     url: 'https://www.heyspruce.com/restaurant-cleaning-beverly-hills',
   },
 };
 
 export default function BeverlyHillsPage() {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.heyspruce.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Restaurant Cleaning Beverly Hills",
+        "item": "https://www.heyspruce.com/restaurant-cleaning-beverly-hills"
+      }
+    ]
+  };
+
+  const localBusinessSchema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Spruce Restaurant Cleaning - Beverly Hills",
+    "image": "https://www.heyspruce.com/images/logo.png",
+    "telephone": "+18772532646",
+    "priceRange": "$$-$$$",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Beverly Hills",
+      "addressRegion": "CA",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 34.0736,
+      "longitude": -118.4004
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": "Beverly Hills"
+    }
+  };
+
   const serviceAreas = [
     {
       title: 'Rodeo Drive Restaurant Cleaning',
@@ -40,7 +86,25 @@ export default function BeverlyHillsPage() {
   ];
 
   return (
-    <main>
+    <>
+      <Script
+        id="breadcrumb-schema"
+        type="application/ld+json"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema)
+        }}
+      />
+      <Script
+        id="local-business-schema"
+        type="application/ld+json"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(localBusinessSchema)
+        }}
+      />
+      <Header />
+      <main>
       {/* Breadcrumbs */}
       <div className="bg-gray-50 border-b border-gray-200">
         <div className="container-custom py-4">
@@ -142,11 +206,86 @@ export default function BeverlyHillsPage() {
         </div>
       </section>
 
+      {/* Pricing */}
+      <section className="py-20 bg-white">
+        <div className="container-custom">
+          <h2 className="text-3xl font-bold mb-12 text-center">Beverly Hills Restaurant Cleaning Pricing</h2>
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-gray-50 rounded-2xl p-8 border border-gray-200">
+              <div className="space-y-6">
+                <div className="flex justify-between items-center pb-4 border-b border-gray-300">
+                  <div>
+                    <div className="font-bold text-lg">Nightly Cleaning (FOH + BOH)</div>
+                    <div className="text-sm text-gray-600">5-7 nights per week</div>
+                  </div>
+                  <div className="font-bold text-xl text-primary">$800-$2,200/mo</div>
+                </div>
+                <div className="flex justify-between items-center pb-4 border-b border-gray-300">
+                  <div>
+                    <div className="font-bold text-lg">Deep Kitchen Cleaning</div>
+                    <div className="text-sm text-gray-600">Quarterly service</div>
+                  </div>
+                  <div className="font-bold text-xl text-primary">$2,000-$5,000/visit</div>
+                </div>
+                <div className="flex justify-between items-center">
+                  <div>
+                    <div className="font-bold text-lg">Hood & Exhaust Cleaning</div>
+                    <div className="text-sm text-gray-600">NFPA 96 compliant</div>
+                  </div>
+                  <div className="font-bold text-xl text-primary">$450-$900/visit</div>
+                </div>
+              </div>
+              <div className="mt-8 pt-6 border-t border-gray-300 text-center">
+                <p className="text-gray-700 mb-4">
+                  <strong>Multi-location discount:</strong> Save 20-30% when you have 3+ locations
+                </p>
+                <Link href="/#quote" className="inline-block bg-primary text-white px-6 py-3 rounded-xl font-bold hover:bg-primary/90 transition">
+                  Get Custom Quote
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-20 bg-gray-50">
+        <div className="container-custom max-w-4xl">
+          <h2 className="text-3xl font-bold mb-12 text-center">Frequently Asked Questions</h2>
+          <div className="space-y-6">
+            <div className="bg-white rounded-2xl p-8 shadow-custom-sm">
+              <h3 className="text-xl font-bold mb-3">How much does restaurant cleaning cost in Beverly Hills?</h3>
+              <p className="text-gray-700">
+                Nightly cleaning for Beverly Hills restaurants typically ranges from $800-$2,200 per month depending on size, frequency, and service scope. Deep kitchen cleaning runs $2,000-$5,000 per quarterly visit. Multi-location chains save 20-30% with volume pricing.
+              </p>
+            </div>
+            <div className="bg-white rounded-2xl p-8 shadow-custom-sm">
+              <h3 className="text-xl font-bold mb-3">Do you serve fine dining restaurants in Beverly Hills?</h3>
+              <p className="text-gray-700">
+                Absolutely. Many of our Beverly Hills clients are upscale and fine dining establishments. We provide white-glove service with attention to detail that matches your venue's standards. Discreet, professional crews who understand high-end hospitality.
+              </p>
+            </div>
+            <div className="bg-white rounded-2xl p-8 shadow-custom-sm">
+              <h3 className="text-xl font-bold mb-3">Are you available for emergency cleaning before VIP events?</h3>
+              <p className="text-gray-700">
+                Yes. We offer 24/7 emergency cleaning services for Beverly Hills restaurants. Last-minute private events, celebrity bookings, or unexpected situations — we can dispatch crews within hours.
+              </p>
+            </div>
+            <div className="bg-white rounded-2xl p-8 shadow-custom-sm">
+              <h3 className="text-xl font-bold mb-3">How quickly can you start service?</h3>
+              <p className="text-gray-700">
+                For new clients, we typically start within 1-2 weeks. This includes site visit, customized checklist creation, crew assignment, and dashboard setup. Emergency cleaning can start within 24-48 hours.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-20 bg-gradient-to-br from-primary to-secondary text-white">
         <div className="container-custom text-center">
           <h2 className="text-4xl font-bold mb-4">Ready to Clean Your Beverly Hills Restaurant?</h2>
-          <p className="text-xl mb-8 text-white/90">Join 250+ Beverly Hills restaurants that trust Hey Spruce</p>
+          <p className="text-xl mb-8 text-white/90">Premium cleaning for Beverly Hills' finest restaurants</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="tel:+18772532646" className="bg-white text-primary px-8 py-4 rounded-2xl font-bold text-lg hover:bg-gray-100 transition">
               Call 1-877-CLEANING
@@ -176,5 +315,7 @@ export default function BeverlyHillsPage() {
         </div>
       </section>
     </main>
+    <Footer />
+    </>
   );
 }

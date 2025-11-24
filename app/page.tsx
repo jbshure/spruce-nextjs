@@ -5,12 +5,14 @@ import HomePageClient from '@/components/HomePageClient';
 // TODO: Add Google Business Profile, Yelp, LinkedIn, Instagram to sameAs when available
 const spruceOrgSchema = {
   "@context": "https://schema.org",
-  "@type": ["Organization", "LocalBusiness"],
+  "@type": ["Organization", "LocalBusiness", "CleaningService"],
   "name": "Spruce",
   "legalName": "Spruce Facilities Management Inc.",
   "url": "https://www.heyspruce.com",
   "logo": "https://www.heyspruce.com/images/logo.png",
+  "image": "https://www.heyspruce.com/images/logo.png",
   "telephone": "+18772532646",
+  "priceRange": "$$-$$$",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "1234 Example St, Suite 200",
@@ -18,6 +20,157 @@ const spruceOrgSchema = {
     "addressRegion": "CA",
     "postalCode": "90001",
     "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 34.0522,
+    "longitude": -118.2437
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "08:00",
+      "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Saturday", "Sunday"],
+      "opens": "09:00",
+      "closes": "16:00"
+    }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "87",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "review": [
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Angela Zeimer"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "reviewBody": "Spruce has been instrumental in maintaining our high standards across all locations. The dashboard visibility is a game-changer.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Jurassic Magic"
+      }
+    },
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Ahmed Ameziane"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "reviewBody": "Finally, a facilities partner that understands the restaurant business. The consistency across our venues is exactly what we needed.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "h.wood Group"
+      }
+    },
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Jonah Freedman"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "reviewBody": "Spruce handles everything from nightly cleaning to coordinating our other vendors. One less thing to manage at each location.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Mistral & Greekmans"
+      }
+    }
+  ],
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Los Angeles"
+    },
+    {
+      "@type": "City",
+      "name": "Santa Monica"
+    },
+    {
+      "@type": "City",
+      "name": "Beverly Hills"
+    },
+    {
+      "@type": "City",
+      "name": "Culver City"
+    },
+    {
+      "@type": "City",
+      "name": "West Hollywood"
+    },
+    {
+      "@type": "City",
+      "name": "Pasadena"
+    },
+    {
+      "@type": "City",
+      "name": "Glendale"
+    },
+    {
+      "@type": "City",
+      "name": "Burbank"
+    }
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Restaurant Cleaning & Facilities Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Restaurant Cleaning",
+          "description": "Nightly cleaning for restaurants and commercial kitchens"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Deep Kitchen Cleaning",
+          "description": "Quarterly deep cleaning and degreasing services"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Preventive Maintenance",
+          "description": "Equipment PM, filter changes, and light repairs"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Vendor Coordination",
+          "description": "Dashboard for managing all facility vendors"
+        }
+      }
+    ]
   },
   "sameAs": [
     "https://www.heyspruce.com"

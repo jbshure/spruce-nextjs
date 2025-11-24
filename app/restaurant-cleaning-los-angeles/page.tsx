@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Script from 'next/script';
 
 export const metadata: Metadata = {
   alternates: {
@@ -39,6 +40,25 @@ const restaurantCleaningFaqs = [
 ];
 
 export default function RestaurantCleaningLosAngeles() {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.heyspruce.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Restaurant Cleaning Los Angeles",
+        "item": "https://www.heyspruce.com/restaurant-cleaning-los-angeles"
+      }
+    ]
+  };
+
   // Build FAQ schema from array
   const faqSchema = {
     "@context": "https://schema.org",
@@ -108,6 +128,14 @@ export default function RestaurantCleaningLosAngeles() {
 
   return (
     <main>
+      <Script
+        id="breadcrumb-schema"
+        type="application/ld+json"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema)
+        }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}

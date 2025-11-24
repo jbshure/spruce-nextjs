@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Script from 'next/script';
 
 export const metadata: Metadata = {
   alternates: {
@@ -10,8 +11,41 @@ export const metadata: Metadata = {
 };
 
 export default function NightlyCleaning() {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.heyspruce.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Services",
+        "item": "https://www.heyspruce.com/#services"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Nightly Cleaning",
+        "item": "https://www.heyspruce.com/nightly-cleaning"
+      }
+    ]
+  };
+
   return (
     <>
+      <Script
+        id="breadcrumb-schema"
+        type="application/ld+json"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema)
+        }}
+      />
       <section className="section-primary">
         <div className="container-custom">
           <div className="text-sm text-white/80 mb-4">
