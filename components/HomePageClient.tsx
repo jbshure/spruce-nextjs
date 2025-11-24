@@ -241,6 +241,290 @@ export default function HomePageClient() {
       {/* Trust & Proof */}
       <TrustProof />
 
+      {/* Case Studies */}
+      <section id="case-studies" className="section-white">
+        <div className="container-custom">
+          <div className="text-center mb-12">
+            <h2 className="heading-lg mb-4">Case Studies</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Real results from multi-location restaurant brands using Spruce
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-3 gap-8">
+            {/* Case Study 1: Fast-Casual Chain */}
+            <div className="card p-8 animate-fade-in">
+              <div className="flex items-center mb-6">
+                <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mr-4">
+                  <svg className="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                  </svg>
+                </div>
+                <div>
+                  <div className="font-bold text-lg">Fast-Casual Concept</div>
+                  <div className="text-sm text-gray-600">28 locations • Southern California</div>
+                </div>
+              </div>
+
+              <div className="mb-6">
+                <h3 className="font-bold text-xl mb-3">The Problem</h3>
+                <p className="text-gray-700 mb-4">
+                  Working with 8 different vendors across 28 locations. No visibility into what was getting done. Emergency cleanings eating into margins. Operations team spending 20+ hours/week coordinating vendors.
+                </p>
+
+                <h3 className="font-bold text-xl mb-3">The Solution</h3>
+                <p className="text-gray-700 mb-4">
+                  Consolidated to Spruce for nightly cleaning + quarterly deep cleans. All 28 locations on standardized checklist. Dashboard gave ops team real-time visibility. Light repairs handled during cleaning visits.
+                </p>
+
+                <h3 className="font-bold text-xl mb-3">The Results</h3>
+                <div className="grid grid-cols-3 gap-4 p-4 bg-gray-50 rounded-xl">
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-primary">31%</div>
+                    <div className="text-xs text-gray-600">Cost reduction</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-primary">15hr</div>
+                    <div className="text-xs text-gray-600">Weekly time saved</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-primary">100%</div>
+                    <div className="text-xs text-gray-600">Inspection pass</div>
+                  </div>
+                </div>
+              </div>
+
+              <blockquote className="border-l-4 border-primary pl-4 italic text-gray-700">
+                "The dashboard alone saved our ops team 15+ hours per week. We actually know what's getting done now."
+              </blockquote>
+            </div>
+
+            {/* Case Study 2: QSR Franchise */}
+            <div className="card p-8 animate-fade-in">
+              <div className="flex items-center mb-6">
+                <div className="w-16 h-16 bg-secondary/10 rounded-xl flex items-center justify-center mr-4">
+                  <svg className="w-8 h-8 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7" />
+                  </svg>
+                </div>
+                <div>
+                  <div className="font-bold text-lg">Quick-Service Franchise Group</div>
+                  <div className="text-sm text-gray-600">47 locations • National footprint</div>
+                </div>
+              </div>
+
+              <div className="mb-6">
+                <h3 className="font-bold text-xl mb-3">The Problem</h3>
+                <p className="text-gray-700 mb-4">
+                  Franchisees using local cleaning companies with wildly inconsistent quality. 18-24 emergency calls per month across the system. Corporate had zero visibility into facilities issues until they became crises.
+                </p>
+
+                <h3 className="font-bold text-xl mb-3">The Solution</h3>
+                <p className="text-gray-700 mb-4">
+                  Rolled out Spruce to all company-owned stores first (12 locations), then offered to franchisees. Standardized cleaning specs, PM schedules, and vendor coordination. Corporate got dashboard access to track all locations.
+                </p>
+
+                <h3 className="font-bold text-xl mb-3">The Results</h3>
+                <div className="grid grid-cols-3 gap-4 p-4 bg-gray-50 rounded-xl">
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-secondary">40%</div>
+                    <div className="text-xs text-gray-600">Fewer emergencies</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-secondary">8→1</div>
+                    <div className="text-xs text-gray-600">Vendor portals</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-secondary">1.4d</div>
+                    <div className="text-xs text-gray-600">Avg close time</div>
+                  </div>
+                </div>
+              </div>
+
+              <blockquote className="border-l-4 border-secondary pl-4 italic text-gray-700">
+                "Single platform replaced 8 different vendor portals. Franchisees are thrilled with the consistency."
+              </blockquote>
+            </div>
+
+            {/* Case Study 3: Fine Dining Group */}
+            <div className="card p-8 animate-fade-in">
+              <div className="flex items-center mb-6">
+                <div className="w-16 h-16 bg-green-100 rounded-xl flex items-center justify-center mr-4">
+                  <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                  </svg>
+                </div>
+                <div>
+                  <div className="font-bold text-lg">Full-Service Restaurant Group</div>
+                  <div className="text-sm text-gray-600">12 locations • LA Metro Area</div>
+                </div>
+              </div>
+
+              <div className="mb-6">
+                <h3 className="font-bold text-xl mb-3">The Problem</h3>
+                <p className="text-gray-700 mb-4">
+                  High-end concepts requiring white-glove cleaning standards. Previous vendor missed details, leading to 3 health code violations in one year. No photo documentation meant disputes over what actually got cleaned.
+                </p>
+
+                <h3 className="font-bold text-xl mb-3">The Solution</h3>
+                <p className="text-gray-700 mb-4">
+                  Implemented detailed checklists with photo requirements for every visit. Assigned dedicated crews who learned each venue's unique needs. Added pre-inspection deep cleans to schedule automatically.
+                </p>
+
+                <h3 className="font-bold text-xl mb-3">The Results</h3>
+                <div className="grid grid-cols-3 gap-4 p-4 bg-gray-50 rounded-xl">
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-green-600">0</div>
+                    <div className="text-xs text-gray-600">Code violations</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-green-600">99%</div>
+                    <div className="text-xs text-gray-600">Vendor on-time</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-green-600">24hr</div>
+                    <div className="text-xs text-gray-600">Quote delivery</div>
+                  </div>
+                </div>
+              </div>
+
+              <blockquote className="border-l-4 border-green-600 pl-4 italic text-gray-700">
+                "Zero health code violations in 18 months. Worth every penny for the peace of mind."
+              </blockquote>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Spruce */}
+      <section id="why-spruce" className="section-gray">
+        <div className="container-custom">
+          <div className="text-center mb-12">
+            <h2 className="heading-lg mb-4">Why Spruce?</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Built specifically for multi-location restaurant chains — not adapted from single-location cleaning
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-12">
+            {/* Differentiator 1 */}
+            <div className="card card-hover p-8 animate-fade-in">
+              <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
+                <svg className="w-7 h-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                </svg>
+              </div>
+              <h3 className="font-bold text-xl mb-3">One Dashboard for Every Location</h3>
+              <p className="text-gray-700">
+                Stop juggling vendor portals, emails, and phone calls. See every cleaning visit, work order, and vendor across your entire chain in one place. Real-time updates, photo proof, and full history.
+              </p>
+            </div>
+
+            {/* Differentiator 2 */}
+            <div className="card card-hover p-8 animate-fade-in">
+              <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
+                <svg className="w-7 h-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h3 className="font-bold text-xl mb-3">Standardized Across All Locations</h3>
+              <p className="text-gray-700">
+                Same checklists, same quality standards, same reporting format — whether you have 5 locations or 50. No more inconsistency between stores. Operations teams love the predictability.
+              </p>
+            </div>
+
+            {/* Differentiator 3 */}
+            <div className="card card-hover p-8 animate-fade-in">
+              <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
+                <svg className="w-7 h-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h3 className="font-bold text-xl mb-3">Beyond Cleaning: Full Facilities Partner</h3>
+              <p className="text-gray-700">
+                Nightly cleaning is just the start. We handle preventive maintenance, coordinate your other vendors (HVAC, refrigeration, plumbing), manage light repairs, and keep you compliant. One partner, complete coverage.
+              </p>
+            </div>
+
+            {/* Differentiator 4 */}
+            <div className="card card-hover p-8 animate-fade-in">
+              <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
+                <svg className="w-7 h-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+              <h3 className="font-bold text-xl mb-3">Built for Restaurant Operations</h3>
+              <p className="text-gray-700">
+                We understand restaurant hours, health inspections, hood cleaning schedules, and what "clean" actually means in a commercial kitchen. Not a generic janitorial service trying to figure out your industry.
+              </p>
+            </div>
+          </div>
+
+          {/* Client Testimonials */}
+          <div className="max-w-4xl mx-auto">
+            <h3 className="heading-sm text-center mb-8">What Restaurant Leaders Say</h3>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="card p-6 animate-scale-in">
+                <div className="mb-4">
+                  <div className="flex items-center mb-2">
+                    {[1,2,3,4,5].map((star) => (
+                      <svg key={star} className="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                        <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
+                      </svg>
+                    ))}
+                  </div>
+                  <p className="text-gray-700 italic mb-4">
+                    "Spruce has been instrumental in maintaining our high standards across all locations. The dashboard visibility is a game-changer."
+                  </p>
+                </div>
+                <div className="border-t pt-4">
+                  <div className="font-bold">Angela Zeimer</div>
+                  <div className="text-sm text-gray-600">Jurassic Magic</div>
+                </div>
+              </div>
+
+              <div className="card p-6 animate-scale-in">
+                <div className="mb-4">
+                  <div className="flex items-center mb-2">
+                    {[1,2,3,4,5].map((star) => (
+                      <svg key={star} className="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                        <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
+                      </svg>
+                    ))}
+                  </div>
+                  <p className="text-gray-700 italic mb-4">
+                    "Finally, a facilities partner that understands the restaurant business. The consistency across our venues is exactly what we needed."
+                  </p>
+                </div>
+                <div className="border-t pt-4">
+                  <div className="font-bold">Ahmed Ameziane</div>
+                  <div className="text-sm text-gray-600">h.wood Group</div>
+                </div>
+              </div>
+
+              <div className="card p-6 animate-scale-in">
+                <div className="mb-4">
+                  <div className="flex items-center mb-2">
+                    {[1,2,3,4,5].map((star) => (
+                      <svg key={star} className="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                        <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
+                      </svg>
+                    ))}
+                  </div>
+                  <p className="text-gray-700 italic mb-4">
+                    "Spruce handles everything from nightly cleaning to coordinating our other vendors. One less thing to manage at each location."
+                  </p>
+                </div>
+                <div className="border-t pt-4">
+                  <div className="font-bold">Jonah Freedman</div>
+                  <div className="text-sm text-gray-600">Mistral & Greekmans</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Client Dashboard Section */}
       <section id="platform" className="scroll-mt-24 py-16 md:py-24 bg-slate-50">
         <div className="container-custom max-w-6xl">

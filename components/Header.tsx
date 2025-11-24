@@ -60,8 +60,11 @@ export default function Header() {
                 </div>
               )}
             </div>
-            <Link href="/#roi-calculator" className="text-white hover:text-white/80 font-medium transition">
-              ROI Calculator
+            <Link href="/#case-studies" className="text-white hover:text-white/80 font-medium transition">
+              Case Studies
+            </Link>
+            <Link href="/#why-spruce" className="text-white hover:text-white/80 font-medium transition">
+              Why Spruce
             </Link>
             <Link href="/#platform" className="text-white hover:text-white/80 font-medium transition">
               Dashboard
@@ -117,8 +120,11 @@ export default function Header() {
               <Link href="/vendor-management" className="text-white hover:text-white/80 py-2">
                 Vendor Coordination
               </Link>
-              <Link href="/#roi-calculator" className="text-white hover:text-white/80 py-2">
-                ROI Calculator
+              <Link href="/#case-studies" className="text-white hover:text-white/80 py-2">
+                Case Studies
+              </Link>
+              <Link href="/#why-spruce" className="text-white hover:text-white/80 py-2">
+                Why Spruce
               </Link>
               <Link href="/#platform" className="text-white hover:text-white/80 py-2">
                 Dashboard
