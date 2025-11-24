@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+
+@layer base {
+  :root {
+    --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 12px 0 rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 10px 30px 0 rgba(0, 0, 0, 0.12);
+    --shadow-xl: 0 20px 40px 0 rgba(0, 0, 0, 0.15);
+  }
+
+  body {
+    @apply font-sans text-gray-700 antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold text-gray-900;
+  }
+}
+
+@layer utilities {
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .shadow-custom-sm {
+    box-shadow: var(--shadow-sm);
+  }
+
+  .shadow-custom-md {
+    box-shadow: var(--shadow-md);
+  }
+
+  .shadow-custom-lg {
+    box-shadow: var(--shadow-lg);
+  }
+
+  .shadow-custom-xl {
+    box-shadow: var(--shadow-xl);
+  }
+}
