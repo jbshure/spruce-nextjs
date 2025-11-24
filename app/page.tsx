@@ -27,8 +27,8 @@ const spruceOrgSchema = {
 const spruceServiceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  "name": "Restaurant Facilities Management & Cleaning for Multi-Location Chains",
-  "description": "End-to-end facilities partner for multi-location restaurant chains in Los Angeles, including nightly cleaning, deep kitchen cleaning, preventive maintenance, light repairs, and vendor management.",
+  "name": "Restaurant Cleaning & Facilities Management for Multi-Location Chains Los Angeles",
+  "description": "Professional restaurant cleaning services and full facilities management for multi-location restaurant chains in Los Angeles. Nightly cleaning, deep kitchen cleaning, preventive maintenance, light repairs, and vendor coordination.",
   "provider": {
     "@type": "Organization",
     "name": "Spruce",

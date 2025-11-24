@@ -12,8 +12,8 @@ const montserrat = Montserrat({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.heyspruce.com'),
-  title: "Restaurant Cleaning Los Angeles | Multi-Location Facilities Partner | Hey Spruce",
-  description: "The only facilities partner for multi-location restaurant chains in Los Angeles. Cleaning + Preventive Maintenance + Repairs + Vendor Management Platform. Trusted by restaurant brands across LA.",
+  title: "Restaurant Cleaning Los Angeles | Multi-Location Facilities Management | Hey Spruce",
+  description: "Professional restaurant cleaning services and facilities management for multi-location chains in Los Angeles. Nightly cleaning, deep kitchen cleaning, PM, and vendor coordination. Trusted by restaurant brands across LA.",
   keywords: "restaurant cleaning los angeles, commercial kitchen cleaning services los angeles, restaurant cleaning services los angeles ca, kitchen deep cleaning los angeles, exhaust hood cleaning los angeles, restaurant sanitization services, multi-location restaurant cleaning",
   authors: [{ name: "Hey Spruce Restaurant Cleaning" }],
   creator: "Hey Spruce LLC",
@@ -33,8 +33,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "#1 Restaurant Cleaning Los Angeles | Commercial Kitchen Cleaning Services",
-    description: "Professional restaurant cleaning in LA. Fast emergency service, health inspection support. Trusted by restaurant brands across Los Angeles.",
+    title: "Restaurant Cleaning Los Angeles | Commercial Kitchen Cleaning Services",
+    description: "Professional restaurant cleaning and facilities management for multi-location chains in LA. Nightly cleaning, deep kitchen cleaning, and preventive maintenance. Trusted by restaurant brands across Los Angeles.",
     url: "https://www.heyspruce.com",
     siteName: "Hey Spruce Restaurant Cleaning",
     locale: "en_US",

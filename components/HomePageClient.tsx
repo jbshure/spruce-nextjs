@@ -27,25 +27,25 @@ export default function HomePageClient() {
         <div className="container-custom relative z-10 py-20">
           <div className="max-w-4xl">
             <h1 className="text-5xl md:text-6xl font-extrabold text-white mb-6 leading-tight">
-              The Only Facilities Partner for Multi-Location Restaurant Chains
+              Restaurant Cleaning & Facilities Management for Multi-Location Chains
             </h1>
             <p className="text-xl text-white/90 mb-4">
-              One platform. One partner. Complete facilities management for growing restaurant brands across Los Angeles and Southern California.
+              Nightly cleaning, deep kitchen cleaning, and full facilities management across LA and Southern California – backed by a single dashboard.
             </p>
             <p className="text-lg text-white/80 mb-2">
               Serving LA Metro, Orange County, Inland Empire, and select multi-state groups
             </p>
             <p className="text-2xl text-white font-medium mb-8">
-              Cleaning + Preventive Maintenance + Repairs + Vendor Management
+              Professional Restaurant Cleaning + PM + Repairs + Vendor Coordination
             </p>
 
             {/* Service Pillars */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
               {[
                 { text: 'Nightly Cleaning' },
+                { text: 'Deep Kitchen Cleaning' },
                 { text: 'Preventive Maintenance' },
-                { text: 'Emergency Repairs' },
-                { text: 'Vendor Platform' }
+                { text: 'Client Dashboard' }
               ].map((pillar, idx) => (
                 <div key={idx} className="bg-white/15 backdrop-blur-sm border border-white/25 rounded-xl p-4 hover:bg-white/25 transition">
                   <div className="text-white font-semibold text-sm">{pillar.text}</div>
@@ -92,23 +92,64 @@ export default function HomePageClient() {
         </div>
       </section>
 
-      {/* Services Section */}
-      <section id="services" className="section-gray">
+      {/* Restaurant Cleaning Services - Featured */}
+      <section id="services" className="section-white">
         <div className="container-custom">
           <div className="text-center mb-12">
-            <h2 className="heading-lg mb-4">Complete Facilities Management</h2>
+            <h2 className="heading-lg mb-4">Restaurant Cleaning Services Los Angeles</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Everything your multi-location restaurant chain needs in one partner
+              Professional cleaning programs built for multi-location restaurant chains
+            </p>
+          </div>
+
+          {/* Featured Restaurant Cleaning Card */}
+          <div className="max-w-4xl mx-auto mb-12">
+            <Link href="/restaurant-cleaning-los-angeles" className="card card-hover p-8 group animate-fade-in block">
+              <div className="flex items-start gap-6">
+                <div className="w-20 h-20 bg-primary/10 rounded-2xl flex items-center justify-center flex-shrink-0">
+                  <svg className="w-10 h-10 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-2xl font-bold mb-3 group-hover:text-primary transition">Restaurant Cleaning Programs</h3>
+                  <p className="text-gray-700 mb-4">Complete cleaning services designed for restaurant chains across Los Angeles and Southern California</p>
+                  <ul className="grid md:grid-cols-3 gap-3 mb-4">
+                    <li className="flex items-start text-sm">
+                      <svg className="w-5 h-5 text-green-600 mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                      <span>Nightly FOH/BOH cleaning</span>
+                    </li>
+                    <li className="flex items-start text-sm">
+                      <svg className="w-5 h-5 text-green-600 mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                      <span>Quarterly deep cleans</span>
+                    </li>
+                    <li className="flex items-start text-sm">
+                      <svg className="w-5 h-5 text-green-600 mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                      <span>Inspection-prep detailing</span>
+                    </li>
+                  </ul>
+                  <div className="text-primary font-semibold text-lg">View full cleaning services →</div>
+                </div>
+              </div>
+            </Link>
+          </div>
+
+          {/* Additional Services Grid */}
+          <div className="text-center mb-8">
+            <h3 className="text-2xl font-bold mb-4">Complete Facilities Management</h3>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Beyond cleaning: preventive maintenance, repairs, and vendor coordination
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              {
-                title: 'Restaurant Cleaning',
-                description: 'Nightly cleaning, deep kitchen cleaning, BOH/FOH services',
-                link: '/restaurant-cleaning-los-angeles'
-              },
               {
                 title: 'Kitchen Deep Cleaning',
                 description: 'Equipment pull-outs, degreasing, quarterly programs',
@@ -120,18 +161,23 @@ export default function HomePageClient() {
                 link: '/preventive-maintenance'
               },
               {
-                title: 'Vendor Management',
-                description: 'Coordinate all vendors through one platform',
+                title: 'Vendor Coordination',
+                description: 'Manage HVAC, refrigeration, plumbing through one dashboard',
                 link: '/vendor-management'
               },
               {
-                title: 'Hood & Exhaust Coordination',
+                title: 'Hood & Exhaust Cleaning',
                 description: 'NFPA 96 compliant hood cleaning scheduling',
                 link: '/hood-exhaust-cleaning'
               },
               {
+                title: 'Light Repairs',
+                description: 'Small fixes handled in-house during cleaning visits',
+                link: '/repairs'
+              },
+              {
                 title: 'Multi-Location Programs',
-                description: 'Built for restaurant chains across LA',
+                description: 'Standardized service across your entire chain',
                 link: '/multi-location-cleaning'
               }
             ].map((service, idx) => (
@@ -195,16 +241,16 @@ export default function HomePageClient() {
       {/* Trust & Proof */}
       <TrustProof />
 
-      {/* Platform Section */}
+      {/* Client Dashboard Section */}
       <section id="platform" className="scroll-mt-24 py-16 md:py-24 bg-slate-50">
         <div className="container-custom max-w-6xl">
           <div className="grid gap-12 md:grid-cols-2 md:items-center">
             <div>
               <h2 className="text-3xl font-semibold tracking-tight md:text-4xl text-gray-900">
-                The Spruce Platform
+                Client Dashboard
               </h2>
               <p className="mt-4 text-slate-700">
-                One dashboard for every location, work order, and vendor. Spruce isn&apos;t just a cleaning crew – behind every visit is a platform that shows you exactly what&apos;s getting done across your chain.
+                Track every cleaning visit, work order, and vendor across all your locations. Behind every service is a dashboard that shows you exactly what&apos;s getting done at each restaurant.
               </p>
 
               <ul className="mt-6 space-y-3 text-slate-700">
