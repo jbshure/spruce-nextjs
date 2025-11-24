@@ -1,7 +1,5 @@
 import type { Metadata } from 'next';
 import Script from 'next/script';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
@@ -39,7 +37,6 @@ export default function InHouseVsOutsourced() {
           __html: JSON.stringify(breadcrumbSchema)
         }}
       />
-      <Header />
       <main>
         {/* Hero Section */}
         <section className="section-primary text-white">
@@ -678,7 +675,6 @@ export default function InHouseVsOutsourced() {
           </div>
         </section>
       </main>
-      <Footer />
     </>
   );
 }
