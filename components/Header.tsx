@@ -55,7 +55,7 @@ export default function Header() {
               )}
             </div>
             <Link href="/#platform" className="text-white hover:text-white/80 font-medium transition">
-              Platform
+              Dashboard
             </Link>
             <Link href="/#case-studies" className="text-white hover:text-white/80 font-medium transition">
               Case Studies
@@ -112,7 +112,7 @@ export default function Header() {
                 Preventive Maintenance
               </Link>
               <Link href="/#platform" className="text-white hover:text-white/80 py-2">
-                Platform
+                Dashboard
               </Link>
               <Link href="/#pricing" className="text-white hover:text-white/80 py-2">
                 Pricing
