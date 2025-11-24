@@ -3,6 +3,9 @@ import Script from "next/script";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "/services",
+  },
   title: "Restaurant Facilities Services | Cleaning, PM, Repairs, Vendor Management | Spruce",
   description:
     "Full restaurant facilities services for multi-location chains in Los Angeles. Nightly cleaning, deep kitchen cleaning, preventive maintenance, light repairs, and vendor management.",

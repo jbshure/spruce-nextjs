@@ -2,6 +2,9 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: '/restaurant-cleaning-burbank',
+  },
   title: 'Restaurant Cleaning Burbank | Media District Commercial Kitchen Cleaning | Hey Spruce',
   description: 'Restaurant cleaning Burbank - Serving Magnolia Blvd, San Fernando Blvd, and Media District restaurants. Entertainment industry specialists. Professional kitchen cleaning for studio-area dining.',
   keywords: 'restaurant cleaning burbank, burbank restaurant cleaning, magnolia blvd restaurant cleaning, media district restaurant cleaning, commercial kitchen cleaning burbank',

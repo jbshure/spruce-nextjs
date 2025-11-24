@@ -3,6 +3,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "/hood-exhaust-cleaning",
+  },
   title:
     "Hood & Exhaust Cleaning Coordination | NFPA 96 Compliant | Spruce",
   description:

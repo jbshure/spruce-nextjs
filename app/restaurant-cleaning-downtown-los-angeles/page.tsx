@@ -2,6 +2,9 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: '/restaurant-cleaning-downtown-los-angeles',
+  },
   title: 'Restaurant Cleaning Downtown Los Angeles | #1 DTLA Commercial Kitchen Cleaning | Hey Spruce',
   description: 'Restaurant cleaning Downtown Los Angeles - Serving DTLA restaurants since 2015. 2-hour response. Health inspection guarantee. Professional kitchen cleaning for Spring Street, Broadway, Little Tokyo, Arts District.',
   keywords: 'restaurant cleaning downtown los angeles, dtla restaurant cleaning, downtown la commercial kitchen cleaning, restaurant cleaning services downtown los angeles, kitchen cleaning dtla',

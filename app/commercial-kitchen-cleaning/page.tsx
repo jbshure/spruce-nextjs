@@ -2,6 +2,9 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "/commercial-kitchen-cleaning",
+  },
   title: 'Commercial Kitchen Cleaning in Los Angeles, CA | Spruce',
   description: 'Commercial kitchen cleaning services in Los Angeles. Deep degreasing, equipment cleaning, floor scrubbing. We reset your kitchen — not just wipe around the problem.',
   keywords: 'commercial kitchen cleaning los angeles, kitchen deep cleaning, commercial kitchen degreasing, restaurant kitchen cleaning LA',

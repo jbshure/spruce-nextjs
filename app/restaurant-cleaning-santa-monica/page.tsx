@@ -2,6 +2,9 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: '/restaurant-cleaning-santa-monica',
+  },
   title: 'Restaurant Cleaning Santa Monica | Beach-Side Commercial Kitchen Cleaning | Hey Spruce',
   description: 'Restaurant cleaning Santa Monica - Serving Third Street Promenade, Main Street, Ocean Avenue restaurants. Beach-side dining specialists. Professional kitchen cleaning for Santa Monica pier establishments.',
   keywords: 'restaurant cleaning santa monica, santa monica restaurant cleaning, third street promenade restaurant cleaning, beach restaurant cleaning santa monica, commercial kitchen cleaning santa monica',

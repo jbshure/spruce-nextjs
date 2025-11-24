@@ -3,6 +3,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "/repairs",
+  },
   title: "Light Repairs for Restaurant Chains | Spruce",
   description:
     "Light repairs for multi-location restaurant chains. Minor electrical, plumbing, fixtures, doors, drains, and small handyman work as part of your facilities program.",

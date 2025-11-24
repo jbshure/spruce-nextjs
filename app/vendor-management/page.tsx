@@ -3,6 +3,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "/vendor-management",
+  },
   title:
     "Vendor Management for Restaurant Chains | HVAC, Refrigeration, Plumbing | Spruce",
   description:

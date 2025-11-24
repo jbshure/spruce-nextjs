@@ -2,9 +2,17 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: '/restaurant-cleaning-west-hollywood',
+  },
   title: 'Restaurant Cleaning West Hollywood | WeHo Commercial Kitchen Cleaning | Hey Spruce',
   description: 'Restaurant cleaning West Hollywood - Serving WeHo restaurants, cafes, and nightlife establishments. Sunset Strip, Santa Monica Blvd, Melrose cleaning services. 24/7 emergency response.',
   keywords: 'restaurant cleaning west hollywood, weho restaurant cleaning, west hollywood commercial kitchen cleaning, sunset strip restaurant cleaning, melrose restaurant cleaning services',
+  openGraph: {
+    title: 'Restaurant Cleaning West Hollywood | WeHo Commercial Kitchen Cleaning',
+    description: 'Professional restaurant cleaning in West Hollywood. Serving WeHo restaurants, cafes, and nightlife establishments. 24/7 emergency response.',
+    url: 'https://www.heyspruce.com/restaurant-cleaning-west-hollywood',
+  },
 };
 
 export default function WestHollywoodPage() {

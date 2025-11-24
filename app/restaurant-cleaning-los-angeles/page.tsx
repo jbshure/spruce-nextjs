@@ -2,6 +2,9 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "/restaurant-cleaning-los-angeles",
+  },
   title: 'Restaurant Cleaning Los Angeles | #1 Commercial Kitchen Cleaning Services LA | Hey Spruce',
   description: 'Restaurant cleaning services Los Angeles - Serving LA restaurant chains and multi-location brands. Nightly cleaning, deep kitchen cleaning, hood cleaning coordination. Health inspection support. Fast emergency response. Call 1-877-CLEANING.',
   keywords: 'restaurant cleaning los angeles, restaurant cleaning services los angeles, commercial kitchen cleaning los angeles, restaurant deep cleaning los angeles, kitchen cleaning services los angeles, restaurant sanitization los angeles, commercial restaurant cleaning LA',
@@ -157,7 +160,7 @@ export default function RestaurantCleaningLosAngeles() {
               },
               {
                 title: 'Preventive Maintenance Included',
-                desc: 'Not just cleaning—we handle equipment PM, light repairs, and vendor scheduling too.'
+                desc: <>Not just cleaning—we handle <Link href="/preventive-maintenance" className="text-primary hover:underline font-semibold">equipment PM</Link>, <Link href="/repairs" className="text-primary hover:underline font-semibold">light repairs</Link>, and <Link href="/vendor-management" className="text-primary hover:underline font-semibold">vendor scheduling</Link> too.</>
               },
               {
                 title: 'Real-Time Reporting',
@@ -180,7 +183,7 @@ export default function RestaurantCleaningLosAngeles() {
             <div>
               <h2 className="text-4xl font-bold mb-6">Nightly Cleaning Services</h2>
               <p className="text-lg text-gray-700 mb-6">
-                Our <strong>restaurant cleaning services Los Angeles</strong> include comprehensive nightly cleaning programs designed specifically for busy commercial kitchens and dining rooms.
+                Our <strong>restaurant cleaning services Los Angeles</strong> include comprehensive <Link href="/nightly-cleaning" className="text-primary hover:underline font-semibold">nightly cleaning programs</Link> designed specifically for busy commercial kitchens and dining rooms.
               </p>
               <ul className="space-y-3 mb-6">
                 {[
@@ -188,8 +191,8 @@ export default function RestaurantCleaningLosAngeles() {
                   'Kitchen line cleaning and sanitization',
                   'Food prep surface cleaning',
                   'Trash removal and receptacle cleaning',
-                  'Dining room and FOH cleaning',
-                  'Restroom deep cleaning and restocking',
+                  <><Link href="/foh-cleaning" className="text-primary hover:underline">Dining room and FOH cleaning</Link></>,
+                  <><Link href="/restroom-cleaning" className="text-primary hover:underline">Restroom deep cleaning</Link> and restocking</>,
                   'Photo documentation of all work'
                 ].map((item, idx) => (
                   <li key={idx} className="flex items-start">
@@ -223,7 +226,7 @@ export default function RestaurantCleaningLosAngeles() {
             <div className="order-1 md:order-2">
               <h2 className="text-4xl font-bold mb-6">BOH / Kitchen Cleaning</h2>
               <p className="text-lg text-gray-700 mb-6">
-                Back-of-house <strong>commercial restaurant cleaning</strong> is where most health code violations occur. Our specialized team handles:
+                Back-of-house <Link href="/commercial-kitchen-cleaning" className="text-primary hover:underline font-semibold"><strong>commercial restaurant cleaning</strong></Link> is where most health code violations occur. Our specialized team handles:
               </p>
               <ul className="space-y-3 mb-6">
                 {[
@@ -232,7 +235,7 @@ export default function RestaurantCleaningLosAngeles() {
                   'Behind and under equipment cleaning',
                   'Walls, ceilings, and hard-to-reach areas',
                   'Grease removal from all surfaces',
-                  'Floor scrubbing and degreasing',
+                  <><Link href="/floor-scrubbing" className="text-primary hover:underline">Floor scrubbing and degreasing</Link></>,
                   'Drain cleaning and sanitization'
                 ].map((item, idx) => (
                   <li key={idx} className="flex items-start">
@@ -259,16 +262,64 @@ export default function RestaurantCleaningLosAngeles() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { region: 'Central LA', cities: ['Downtown Los Angeles', 'Hollywood', 'Beverly Hills', 'West Hollywood', 'Koreatown', 'Mid-Wilshire'] },
-              { region: 'West LA', cities: ['Santa Monica', 'Venice', 'Marina del Rey', 'Culver City', 'Westwood', 'Brentwood'] },
-              { region: 'Valley', cities: ['Burbank', 'Glendale', 'Sherman Oaks', 'Encino', 'Studio City', 'North Hollywood'] },
-              { region: 'East & South', cities: ['Pasadena', 'Alhambra', 'Long Beach', 'Torrance', 'El Segundo', 'Manhattan Beach'] }
+              {
+                region: 'Central LA',
+                cities: [
+                  { name: 'Downtown Los Angeles', link: '/restaurant-cleaning-downtown-los-angeles' },
+                  { name: 'Hollywood', link: null },
+                  { name: 'Beverly Hills', link: '/restaurant-cleaning-beverly-hills' },
+                  { name: 'West Hollywood', link: '/restaurant-cleaning-west-hollywood' },
+                  { name: 'Koreatown', link: null },
+                  { name: 'Mid-Wilshire', link: null }
+                ]
+              },
+              {
+                region: 'West LA',
+                cities: [
+                  { name: 'Santa Monica', link: '/restaurant-cleaning-santa-monica' },
+                  { name: 'Venice', link: '/restaurant-cleaning-venice' },
+                  { name: 'Marina del Rey', link: null },
+                  { name: 'Culver City', link: '/restaurant-cleaning-culver-city' },
+                  { name: 'Westwood', link: null },
+                  { name: 'Brentwood', link: null }
+                ]
+              },
+              {
+                region: 'Valley',
+                cities: [
+                  { name: 'Burbank', link: '/restaurant-cleaning-burbank' },
+                  { name: 'Glendale', link: '/restaurant-cleaning-glendale' },
+                  { name: 'Sherman Oaks', link: null },
+                  { name: 'Encino', link: null },
+                  { name: 'Studio City', link: null },
+                  { name: 'North Hollywood', link: null }
+                ]
+              },
+              {
+                region: 'East & South',
+                cities: [
+                  { name: 'Pasadena', link: '/restaurant-cleaning-pasadena' },
+                  { name: 'Alhambra', link: null },
+                  { name: 'Long Beach', link: null },
+                  { name: 'Torrance', link: null },
+                  { name: 'El Segundo', link: null },
+                  { name: 'Manhattan Beach', link: null }
+                ]
+              }
             ].map((area, idx) => (
               <div key={idx}>
                 <h3 className="text-primary font-bold text-xl mb-4">{area.region}</h3>
                 <ul className="space-y-2">
                   {area.cities.map((city, cidx) => (
-                    <li key={cidx} className="text-gray-700 text-sm border-b border-gray-200 pb-2">{city}</li>
+                    <li key={cidx} className="text-gray-700 text-sm border-b border-gray-200 pb-2">
+                      {city.link ? (
+                        <Link href={city.link} className="hover:text-primary transition">
+                          {city.name}
+                        </Link>
+                      ) : (
+                        city.name
+                      )}
+                    </li>
                   ))}
                 </ul>
               </div>

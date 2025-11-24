@@ -2,6 +2,9 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "/contact",
+  },
   title: 'Contact Hey Spruce | Get a Free Quote for Restaurant Cleaning',
   description: 'Contact Hey Spruce for restaurant cleaning services in Los Angeles. Get a free quote for multi-location facilities management, nightly cleaning, and preventive maintenance.',
 };

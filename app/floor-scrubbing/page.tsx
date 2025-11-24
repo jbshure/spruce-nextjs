@@ -2,6 +2,9 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "/floor-scrubbing",
+  },
   title: 'Commercial Floor Scrubbing & Degreasing — Los Angeles Restaurants',
   description: 'Commercial floor scrubbing and degreasing for Los Angeles restaurants. Machine scrubbing, chemical treatment, slip resistance.',
 };

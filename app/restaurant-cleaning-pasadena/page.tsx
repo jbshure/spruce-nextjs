@@ -2,6 +2,9 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: '/restaurant-cleaning-pasadena',
+  },
   title: 'Restaurant Cleaning Pasadena | Commercial Kitchen Cleaning Services | Hey Spruce',
   description: 'Restaurant cleaning Pasadena - Serving Old Pasadena, Colorado Blvd, and Lake Avenue restaurants. Historic establishment specialists. Professional kitchen cleaning for Rose Bowl area dining.',
   keywords: 'restaurant cleaning pasadena, pasadena restaurant cleaning, old pasadena restaurant cleaning, colorado blvd restaurant cleaning, commercial kitchen cleaning pasadena',

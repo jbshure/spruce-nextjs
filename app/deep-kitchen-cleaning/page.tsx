@@ -2,6 +2,9 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "/deep-kitchen-cleaning",
+  },
   title: 'Deep Kitchen Cleaning Services in Los Angeles, CA | Spruce',
   description: 'Deep kitchen cleaning in Los Angeles that strips out grease, restores surfaces, and gets you inspection-ready. Equipment pull-outs, tile cleaning, quarterly programs.',
 };

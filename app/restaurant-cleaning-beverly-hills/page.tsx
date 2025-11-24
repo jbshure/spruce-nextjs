@@ -2,6 +2,9 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: '/restaurant-cleaning-beverly-hills',
+  },
   title: 'Restaurant Cleaning Beverly Hills | Luxury Commercial Kitchen Cleaning | Hey Spruce',
   description: 'Restaurant cleaning Beverly Hills - Serving Rodeo Drive, Canon Drive, and Wilshire Blvd luxury restaurants. High-end establishment specialists. Professional kitchen cleaning for celebrity dining venues.',
   keywords: 'restaurant cleaning beverly hills, beverly hills restaurant cleaning, rodeo drive restaurant cleaning, luxury restaurant cleaning beverly hills, commercial kitchen cleaning beverly hills',

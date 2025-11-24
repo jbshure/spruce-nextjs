@@ -2,6 +2,9 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: '/restaurant-cleaning-glendale',
+  },
   title: 'Restaurant Cleaning Glendale | Commercial Kitchen Cleaning Services | Hey Spruce',
   description: 'Restaurant cleaning Glendale - Serving Brand Blvd, Americana at Brand, and Glendale Galleria restaurants. Armenian cuisine specialists. Professional kitchen cleaning for shopping district establishments.',
   keywords: 'restaurant cleaning glendale, glendale restaurant cleaning, brand blvd restaurant cleaning, americana at brand restaurant cleaning, commercial kitchen cleaning glendale',

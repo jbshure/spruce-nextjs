@@ -3,6 +3,7 @@ import { Montserrat } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import StickyMobileCTA from "@/components/StickyMobileCTA";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -10,17 +11,21 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.heyspruce.com'),
   title: "Restaurant Cleaning Los Angeles | Multi-Location Facilities Partner | Hey Spruce",
   description: "The only facilities partner for multi-location restaurant chains in Los Angeles. Cleaning + Preventive Maintenance + Repairs + Vendor Management Platform. Trusted by restaurant brands across LA.",
   keywords: "restaurant cleaning los angeles, commercial kitchen cleaning services los angeles, restaurant cleaning services los angeles ca, kitchen deep cleaning los angeles, exhaust hood cleaning los angeles, restaurant sanitization services, multi-location restaurant cleaning",
   authors: [{ name: "Hey Spruce Restaurant Cleaning" }],
   creator: "Hey Spruce LLC",
   publisher: "Hey Spruce LLC",
+  alternates: {
+    canonical: '/',
+  },
   robots: {
-    index: true,
+    index: process.env.VERCEL_ENV === 'production',
     follow: true,
     googleBot: {
-      index: true,
+      index: process.env.VERCEL_ENV === 'production',
       follow: true,
       'max-image-preview': 'large',
       'max-snippet': -1,
@@ -116,6 +121,7 @@ export default function RootLayout({
         <Header />
         <main>{children}</main>
         <Footer />
+        <StickyMobileCTA />
       </body>
     </html>
   );

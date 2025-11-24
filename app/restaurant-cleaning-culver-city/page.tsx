@@ -2,6 +2,9 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: '/restaurant-cleaning-culver-city',
+  },
   title: 'Restaurant Cleaning Culver City | Commercial Kitchen Cleaning Services | Hey Spruce',
   description: 'Restaurant cleaning Culver City - Serving Washington Blvd, Downtown Culver City, and Culver Blvd restaurants. Film industry and tech company dining specialists. Professional kitchen cleaning services.',
   keywords: 'restaurant cleaning culver city, culver city restaurant cleaning, downtown culver city restaurant cleaning, washington blvd restaurant cleaning, commercial kitchen cleaning culver city',

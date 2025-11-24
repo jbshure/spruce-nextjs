@@ -2,6 +2,9 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: '/restaurant-cleaning-venice',
+  },
   title: 'Restaurant Cleaning Venice | Beach-Side Commercial Kitchen Cleaning | Hey Spruce',
   description: 'Restaurant cleaning Venice - Serving Abbot Kinney, Venice Beach Boardwalk, and Rose Avenue restaurants. Beach dining, health-conscious cafes, and eclectic establishment specialists.',
   keywords: 'restaurant cleaning venice, venice beach restaurant cleaning, abbot kinney restaurant cleaning, venice boardwalk restaurant cleaning, commercial kitchen cleaning venice',

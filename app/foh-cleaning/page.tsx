@@ -2,6 +2,9 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "/foh-cleaning",
+  },
   title: 'Front-of-House & Dining Room Cleaning Los Angeles | Spruce',
   description: 'Professional FOH and dining room cleaning in Los Angeles. Tables, chairs, windows, bars, floors. Make the right first impression every service.',
 };

@@ -3,6 +3,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "/multi-location-cleaning",
+  },
   title:
     "Multi-Location Restaurant Cleaning Programs | Chains & Groups | Spruce",
   description:

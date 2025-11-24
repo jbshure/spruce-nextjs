@@ -2,6 +2,9 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "/nightly-cleaning",
+  },
   title: 'Nightly Restaurant Cleaning Services — Los Angeles | Spruce',
   description: 'Nightly restaurant cleaning in Los Angeles. Daily maintenance programs for kitchens, dining rooms, and restrooms. Consistent service, photo documentation.',
 };

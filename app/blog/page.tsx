@@ -2,6 +2,9 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "/blog",
+  },
   title: 'Restaurant Cleaning Blog | Tips, Guides & Industry News | Hey Spruce',
   description: 'Expert restaurant cleaning tips, commercial kitchen maintenance guides, and industry insights from Hey Spruce. Learn best practices for keeping your LA restaurant clean and compliant.',
   keywords: 'restaurant cleaning tips, commercial kitchen cleaning guide, restaurant maintenance, health inspection tips',
