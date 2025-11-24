@@ -27,7 +27,7 @@ export default function HomePageClient() {
         <div className="container-custom relative z-10 py-20">
           <div className="max-w-4xl">
             <h1 className="text-5xl md:text-6xl font-extrabold text-white mb-6 leading-tight">
-              Restaurant Cleaning & Facilities Management for Multi-Location Chains
+              Restaurant Cleaning Los Angeles | Facilities Management for Multi-Location Chains
             </h1>
             <p className="text-xl text-white/90 mb-4">
               Nightly cleaning, deep kitchen cleaning, and full facilities management across LA and Southern California – backed by a single dashboard.
@@ -638,6 +638,60 @@ export default function HomePageClient() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section id="faq" className="section-white">
+        <div className="container-custom max-w-4xl">
+          <div className="text-center mb-12">
+            <h2 className="heading-lg mb-4">Frequently Asked Questions</h2>
+            <p className="text-xl text-gray-600">
+              Everything you need to know about restaurant cleaning services in Los Angeles
+            </p>
+          </div>
+
+          <div className="space-y-6">
+            {[
+              {
+                question: "How much does restaurant cleaning cost in Los Angeles?",
+                answer: "Restaurant cleaning costs vary based on location size, frequency, and services needed. Nightly cleaning typically ranges from $500-$2,000 per location per month. Deep kitchen cleaning runs $1,500-$5,000 per visit. Multi-location chains save 20-30% by consolidating with one partner like Spruce."
+              },
+              {
+                question: "What's included in nightly restaurant cleaning?",
+                answer: "Nightly cleaning includes FOH (dining room, restrooms, entrance) and BOH (kitchen line, equipment surfaces, floors). We handle mopping, degreasing, trash removal, surface sanitization, and restroom restocking. All visits are checklist-driven with photo documentation."
+              },
+              {
+                question: "How often should restaurants get deep kitchen cleaning?",
+                answer: "Most restaurants need deep kitchen cleaning quarterly (every 3 months). High-volume kitchens may need it monthly or bi-monthly. Deep cleaning includes equipment pull-outs, behind-the-line degreasing, wall and ceiling cleaning, and floor scrubbing."
+              },
+              {
+                question: "Do you service restaurants outside Los Angeles?",
+                answer: "Yes. We primarily serve LA Metro, Orange County, Inland Empire, and Greater Southern California. For select multi-location groups, we can expand to other California markets and coordinate services in additional states."
+              },
+              {
+                question: "What makes Spruce different from other restaurant cleaning companies?",
+                answer: "Spruce is built specifically for multi-location restaurant chains. We provide one dashboard for all locations, standardized service across your chain, and handle cleaning + preventive maintenance + vendor coordination. Most cleaning companies only do cleaning."
+              },
+              {
+                question: "How quickly can you start service?",
+                answer: "For new clients, we typically start within 1-2 weeks. This includes site visits, customized checklist creation, crew assignment, and dashboard setup. Emergency cleaning can often start within 24-48 hours."
+              },
+              {
+                question: "Do you handle health inspection preparation?",
+                answer: "Yes. We provide pre-inspection deep cleaning and know exactly what health inspectors look for in Los Angeles County. Our clients maintain a 98.7% inspection pass rate, 10% higher than the industry average."
+              },
+              {
+                question: "Can you coordinate with our other vendors (HVAC, plumbing, etc.)?",
+                answer: "Absolutely. Our dashboard tracks all vendors including HVAC, refrigeration, plumbing, and hood cleaning companies. We can create work orders, schedule service, and give you visibility into all facilities activity."
+              }
+            ].map((faq, idx) => (
+              <div key={idx} className="card p-6 animate-fade-in">
+                <h3 className="font-bold text-xl mb-3 text-gray-900">{faq.question}</h3>
+                <p className="text-gray-700">{faq.answer}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
