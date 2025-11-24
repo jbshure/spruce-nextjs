@@ -54,10 +54,10 @@ export default function Home() {
             {/* Trust Badges */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8 pt-8 border-t border-white/20">
               {[
-                { label: 'BBB A+', sub: 'Rated' },
-                { label: '4.9/5', sub: '287 Reviews' },
-                { label: '$2M', sub: 'Insured' },
-                { label: 'NFPA 96', sub: 'Certified' }
+                { label: 'Fully', sub: 'Insured' },
+                { label: 'NFPA 96', sub: 'Compliant' },
+                { label: 'LA County', sub: 'Licensed' },
+                { label: 'Multi-Location', sub: 'Specialists' }
               ].map((badge, idx) => (
                 <div key={idx} className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-3 hover:bg-white/20 transition">
                   <div className="text-white font-bold text-sm">{badge.label}</div>
@@ -75,7 +75,7 @@ export default function Home() {
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">Complete Facilities Management</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Everything your multi-location restaurant chain needs in one platform
+              Everything your multi-location restaurant chain needs in one partner
             </p>
           </div>
 
@@ -123,7 +123,7 @@ export default function Home() {
       </section>
 
       {/* Platform Section */}
-      <section id="platform" className="py-16 md:py-24 bg-slate-50">
+      <section id="platform" className="scroll-mt-24 py-16 md:py-24 bg-slate-50">
         <div className="container-custom max-w-6xl">
           <div className="grid gap-12 md:grid-cols-2 md:items-center">
             <div>
@@ -193,7 +193,7 @@ export default function Home() {
       </section>
 
       {/* Case Studies Section */}
-      <section id="case-studies" className="py-16 md:py-24">
+      <section id="case-studies" className="scroll-mt-24 py-16 md:py-24">
         <div className="container-custom max-w-6xl">
           <div className="mb-10 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
             <div>
@@ -259,7 +259,7 @@ export default function Home() {
       </section>
 
       {/* Pricing Section */}
-      <section id="pricing" className="py-16 md:py-24 bg-slate-50">
+      <section id="pricing" className="scroll-mt-24 py-16 md:py-24 bg-slate-50">
         <div className="container-custom max-w-6xl">
           <div className="mb-10 text-center">
             <h2 className="text-3xl font-semibold tracking-tight md:text-4xl text-gray-900">
@@ -345,7 +345,7 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-16 md:py-24">
+      <section id="about" className="scroll-mt-24 py-16 md:py-24">
         <div className="container-custom max-w-4xl">
           <h2 className="text-3xl font-semibold tracking-tight md:text-4xl text-gray-900">
             Built by operators, not software tourists
@@ -378,7 +378,7 @@ export default function Home() {
       <section id="quote" className="py-20 bg-gradient-to-br from-primary to-secondary text-white">
         <div className="container-custom text-center">
           <h2 className="text-4xl font-bold mb-4">Ready to Simplify Your Facilities Management?</h2>
-          <p className="text-xl mb-8 text-white/90">Join 500+ restaurant locations that trust Spruce</p>
+          <p className="text-xl mb-8 text-white/90">Join restaurant brands across LA that trust Spruce</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="tel:3235551234" className="bg-white text-primary px-8 py-4 rounded-2xl font-bold text-lg hover:bg-gray-100 transition">
               Call (323) 555-1234

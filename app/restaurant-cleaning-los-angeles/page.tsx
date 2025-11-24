@@ -3,13 +3,131 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Restaurant Cleaning Los Angeles | #1 Commercial Kitchen Cleaning Services LA | Hey Spruce',
-  description: 'Restaurant cleaning services Los Angeles - 500+ LA restaurants cleaned. Nightly cleaning, deep kitchen cleaning, hood cleaning coordination. Health inspection guarantee. 24/7 emergency service. Call (323) 555-1234.',
+  description: 'Restaurant cleaning services Los Angeles - Serving LA restaurant chains and multi-location brands. Nightly cleaning, deep kitchen cleaning, hood cleaning coordination. Health inspection support. Fast emergency response. Call (323) 555-1234.',
   keywords: 'restaurant cleaning los angeles, restaurant cleaning services los angeles, commercial kitchen cleaning los angeles, restaurant deep cleaning los angeles, kitchen cleaning services los angeles, restaurant sanitization los angeles, commercial restaurant cleaning LA',
 };
 
 export default function RestaurantCleaningLosAngeles() {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much does restaurant cleaning cost in Los Angeles?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Restaurant cleaning costs in Los Angeles typically range from $200-$800 per cleaning depending on square footage, service frequency, and scope of work. Nightly cleaning averages $300-500 per session for a typical 2,000-3,000 sq ft restaurant. Deep cleaning services run $800-1,500. Contact us for a free quote specific to your Los Angeles restaurant."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you provide emergency restaurant cleaning in Los Angeles?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, we provide emergency restaurant cleaning services throughout Los Angeles County. If you fail a health inspection or have an urgent cleaning need, we offer same-day service for most LA areas including Downtown LA, West Hollywood, Santa Monica, and the Valley. Contact us for fastest available response times."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What areas of Los Angeles do you serve for restaurant cleaning?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We provide restaurant cleaning services throughout Los Angeles County including Downtown LA, Hollywood, West Hollywood, Beverly Hills, Santa Monica, Venice, Culver City, Pasadena, Glendale, Burbank, the San Fernando Valley, and South Bay cities. We specialize in multi-location restaurant chains across LA."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are your cleaning products safe for commercial kitchens?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, all cleaning products we use are food-safe, EPA-registered, and approved for commercial kitchen use. We use hospital-grade disinfectants that are effective against bacteria and viruses while being safe for food contact surfaces. Our teams are trained in food safety protocols."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you clean my restaurant during business hours?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "While we primarily provide after-hours restaurant cleaning in Los Angeles (typically between 11pm-6am), we can accommodate daytime cleaning for specific services like deep cleaning during your closure day. We work around your schedule to minimize disruption to your operations."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you offer contracts or one-time cleaning for Los Angeles restaurants?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We offer both recurring cleaning contracts (nightly, weekly, or custom schedules) and one-time deep cleaning services for Los Angeles restaurants. Most of our restaurant clients are on recurring schedules, but we also provide pre-opening cleaning, post-construction cleaning, and emergency one-time services."
+        }
+      }
+    ]
+  };
+
+  const localBusinessSchema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Hey Spruce Restaurant Cleaning Los Angeles",
+    "image": "https://www.heyspruce.com/images/logo.png",
+    "@id": "https://www.heyspruce.com",
+    "url": "https://www.heyspruce.com",
+    "telephone": "(323) 555-1234",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Los Angeles",
+      "addressLocality": "Los Angeles",
+      "addressRegion": "CA",
+      "postalCode": "90001",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 34.0522,
+      "longitude": -118.2437
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+      ],
+      "opens": "00:00",
+      "closes": "23:59"
+    },
+    "sameAs": [
+      "https://www.heyspruce.com"
+    ],
+    "areaServed": {
+      "@type": "City",
+      "name": "Los Angeles"
+    },
+    "serviceArea": {
+      "@type": "GeoCircle",
+      "geoMidpoint": {
+        "@type": "GeoCoordinates",
+        "latitude": 34.0522,
+        "longitude": -118.2437
+      },
+      "geoRadius": "50000"
+    }
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      />
+
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-primary to-secondary text-white py-20">
         <div className="container-custom">
@@ -177,7 +295,7 @@ export default function RestaurantCleaningLosAngeles() {
       <section className="py-20 bg-gradient-to-br from-primary to-secondary text-white">
         <div className="container-custom text-center">
           <h2 className="text-4xl font-bold mb-4">Get a Fast Quote for Restaurant Cleaning in Los Angeles</h2>
-          <p className="text-xl mb-8">Join 500+ restaurant locations across LA that trust Spruce for complete facilities management.</p>
+          <p className="text-xl mb-8">Join restaurant brands across LA that trust Spruce for complete facilities management.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <a href="#quote" className="bg-white text-primary px-8 py-4 rounded-2xl font-bold hover:bg-gray-100 transition">
               Get Free Quote
@@ -213,12 +331,12 @@ export default function RestaurantCleaningLosAngeles() {
               {
                 title: 'Los Angeles County Health Code Compliance',
                 description: 'We stay current with all LA County Department of Public Health requirements for restaurant sanitation and cleaning standards.',
-                features: ['ServSafe certified cleaning teams', 'Food-safe cleaning products only', 'Proper sanitizer concentrations verified', 'Temperature logging and documentation']
+                features: ['Trained cleaning teams', 'Food-safe cleaning products only', 'Proper sanitizer concentrations verified', 'Temperature logging and documentation']
               },
               {
                 title: 'Emergency Cleaning for Violations',
                 description: 'Failed an inspection? We provide same-day emergency restaurant cleaning services in Los Angeles to address violations immediately.',
-                features: ['2-hour response time in LA County', '24/7 availability for emergencies', 'Violation-specific cleaning protocols', 'Re-inspection preparation included']
+                features: ['Fast emergency response in LA County', 'Same-day service available', 'Violation-specific cleaning protocols', 'Re-inspection preparation included']
               }
             ].map((item, idx) => (
               <div key={idx} className="bg-white rounded-2xl p-8 shadow-custom-md border border-gray-200">
@@ -283,15 +401,15 @@ export default function RestaurantCleaningLosAngeles() {
               },
               {
                 question: 'Do you provide emergency restaurant cleaning in Los Angeles?',
-                answer: 'Yes, we provide 24/7 emergency restaurant cleaning services throughout Los Angeles County. If you fail a health inspection or have an urgent cleaning need, we offer same-day service with a 2-hour response time for most LA areas including Downtown LA, West Hollywood, Santa Monica, and the Valley.'
+                answer: 'Yes, we provide emergency restaurant cleaning services throughout Los Angeles County. If you fail a health inspection or have an urgent cleaning need, we offer same-day service for most LA areas including Downtown LA, West Hollywood, Santa Monica, and the Valley. Contact us for fastest available response times.'
               },
               {
                 question: 'What areas of Los Angeles do you serve for restaurant cleaning?',
-                answer: 'We provide restaurant cleaning services throughout Los Angeles County including Downtown LA, Hollywood, West Hollywood, Beverly Hills, Santa Monica, Venice, Culver City, Pasadena, Glendale, Burbank, the San Fernando Valley, and South Bay cities. We serve 500+ restaurant locations across LA.'
+                answer: 'We provide restaurant cleaning services throughout Los Angeles County including Downtown LA, Hollywood, West Hollywood, Beverly Hills, Santa Monica, Venice, Culver City, Pasadena, Glendale, Burbank, the San Fernando Valley, and South Bay cities. We specialize in multi-location restaurant chains across LA.'
               },
               {
                 question: 'Are your cleaning products safe for commercial kitchens?',
-                answer: 'Yes, all cleaning products we use are food-safe, EPA-registered, and approved for commercial kitchen use. We use hospital-grade disinfectants that are effective against bacteria and viruses while being safe for food contact surfaces. Our teams are ServSafe certified.'
+                answer: 'Yes, all cleaning products we use are food-safe, EPA-registered, and approved for commercial kitchen use. We use hospital-grade disinfectants that are effective against bacteria and viruses while being safe for food contact surfaces. Our teams are trained in food safety protocols.'
               },
               {
                 question: 'Can you clean my restaurant during business hours?',
@@ -343,7 +461,7 @@ export default function RestaurantCleaningLosAngeles() {
           </div>
 
           <div className="text-center mt-12">
-            <p className="text-xl mb-6">See why 500+ restaurant locations in Los Angeles trust Spruce</p>
+            <p className="text-xl mb-6">See why restaurant brands in Los Angeles trust Spruce</p>
             <Link href="/#quote" className="inline-block bg-white text-gray-900 px-10 py-5 rounded-2xl font-bold text-lg hover:bg-gray-100 transition">
               Schedule a Demo
             </Link>
