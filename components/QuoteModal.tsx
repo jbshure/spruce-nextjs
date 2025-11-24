@@ -1,51 +1,69 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 interface QuoteModalProps {
   isOpen: boolean;
   onClose: () => void;
+  source?: string; // Track which CTA was clicked
 }
 
-export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
+export default function QuoteModal({ isOpen, onClose, source = 'hero' }: QuoteModalProps) {
   const [formData, setFormData] = useState({
     locations: '',
-    annualSpend: '',
-    footprint: '',
+    conceptType: '',
+    geography: [],
+    currentSetup: '',
     priority: '',
-    source: '',
     name: '',
+    role: '',
     email: '',
-    phone: '',
-    company: ''
+    phone: ''
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  useEffect(() => {
+    if (isOpen && typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'form_start_quote', {
+        event_category: 'Quote Form',
+        event_label: source,
+      });
+    }
+  }, [isOpen, source]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate API call
+    // Track form submission
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'form_submit_quote', {
+        event_category: 'Quote Form',
+        event_label: `${formData.locations} locations - ${formData.conceptType}`,
+        value: formData.locations
+      });
+    }
+
+    // TODO: Send to actual API endpoint
     await new Promise(resolve => setTimeout(resolve, 1000));
 
     setIsSubmitted(true);
     setIsSubmitting(false);
-
-    // Track conversion
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'generate_lead', {
-        event_category: 'Quote Form',
-        event_label: `${formData.locations} locations`,
-        value: parseInt(formData.annualSpend) || 0
-      });
-    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     setFormData(prev => ({
       ...prev,
       [e.target.name]: e.target.value
+    }));
+  };
+
+  const handleGeographyChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const options = Array.from(e.target.selectedOptions).map(opt => opt.value);
+    setFormData(prev => ({
+      ...prev,
+      geography: options as any
     }));
   };
 
@@ -59,8 +77,8 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
             <div className="bg-gradient-to-br from-primary to-secondary text-white p-8 rounded-t-3xl">
               <div className="flex justify-between items-start">
                 <div>
-                  <h2 className="text-3xl font-bold mb-2">Get Your Custom Quote</h2>
-                  <p className="text-white/90">Takes less than 2 minutes • Board-ready report in 24 hours</p>
+                  <h2 className="text-3xl font-bold mb-2">Tell us about your locations</h2>
+                  <p className="text-white/90">We'll send a per-store quote and rollout plan</p>
                 </div>
                 <button
                   onClick={onClose}
@@ -73,11 +91,125 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
             </div>
 
             <form onSubmit={handleSubmit} className="p-8 space-y-6">
+              {/* Number of Locations */}
+              <div>
+                <label className="block text-sm font-semibold text-gray-700 mb-2">
+                  Number of locations *
+                </label>
+                <select
+                  name="locations"
+                  required
+                  value={formData.locations}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition bg-white"
+                >
+                  <option value="">Select...</option>
+                  <option value="1-3">1-3 locations</option>
+                  <option value="4-10">4-10 locations</option>
+                  <option value="11-25">11-25 locations</option>
+                  <option value="26-50">26-50 locations</option>
+                  <option value="51+">51+ locations</option>
+                </select>
+              </div>
+
+              {/* Concept Type */}
+              <div>
+                <label className="block text-sm font-semibold text-gray-700 mb-2">
+                  Concept type *
+                </label>
+                <select
+                  name="conceptType"
+                  required
+                  value={formData.conceptType}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition bg-white"
+                >
+                  <option value="">Select...</option>
+                  <option value="full-service">Full-service restaurant</option>
+                  <option value="fast-casual">Fast casual</option>
+                  <option value="qsr">Quick-service / QSR</option>
+                  <option value="coffee-bakery">Coffee / bakery</option>
+                  <option value="commissary">Commissary + satellites</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+              {/* Geography */}
+              <div>
+                <label className="block text-sm font-semibold text-gray-700 mb-2">
+                  Where are your locations? * <span className="text-xs font-normal text-gray-500">(Select all that apply)</span>
+                </label>
+                <select
+                  name="geography"
+                  required
+                  multiple
+                  value={formData.geography}
+                  onChange={handleGeographyChange}
+                  className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition bg-white"
+                  size={4}
+                >
+                  <option value="la-county">Los Angeles County</option>
+                  <option value="greater-socal">Greater Southern California</option>
+                  <option value="multi-state">Multi-state</option>
+                  <option value="other">Other</option>
+                </select>
+                <p className="text-xs text-gray-500 mt-1">Hold Ctrl (Windows) or Cmd (Mac) to select multiple</p>
+              </div>
+
+              {/* Current Setup */}
+              <div>
+                <label className="block text-sm font-semibold text-gray-700 mb-2">
+                  Current setup *
+                </label>
+                <div className="space-y-2">
+                  {[
+                    { value: 'multiple-vendors', label: 'We have multiple cleaning / PM vendors' },
+                    { value: 'single-vendor', label: 'Single vendor for everything' },
+                    { value: 'in-house', label: 'Mostly handled by staff' }
+                  ].map((option) => (
+                    <label key={option.value} className="flex items-center p-3 border border-gray-200 rounded-xl hover:bg-gray-50 cursor-pointer">
+                      <input
+                        type="radio"
+                        name="currentSetup"
+                        value={option.value}
+                        checked={formData.currentSetup === option.value}
+                        onChange={handleChange}
+                        required
+                        className="mr-3 w-4 h-4 text-primary"
+                      />
+                      <span className="text-gray-700">{option.label}</span>
+                    </label>
+                  ))}
+                </div>
+              </div>
+
+              {/* Top Priority */}
+              <div>
+                <label className="block text-sm font-semibold text-gray-700 mb-2">
+                  Top priority *
+                </label>
+                <select
+                  name="priority"
+                  required
+                  value={formData.priority}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition bg-white"
+                >
+                  <option value="">Select your biggest challenge...</option>
+                  <option value="standardize">Standardize cleanliness across locations</option>
+                  <option value="reduce-emergencies">Reduce emergency maintenance calls</option>
+                  <option value="consolidate-vendors">Consolidate vendors + invoices</option>
+                  <option value="visibility">Get visibility / reporting</option>
+                  <option value="expansion">Prepare for expansion</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
               {/* Contact Info */}
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-sm font-semibold text-gray-700 mb-2">
-                    Full Name *
+                    Your name *
                   </label>
                   <input
                     type="text"
@@ -91,16 +223,16 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
                 </div>
                 <div>
                   <label className="block text-sm font-semibold text-gray-700 mb-2">
-                    Company Name *
+                    Your role *
                   </label>
                   <input
                     type="text"
-                    name="company"
+                    name="role"
                     required
-                    value={formData.company}
+                    value={formData.role}
                     onChange={handleChange}
                     className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition"
-                    placeholder="Acme Restaurants"
+                    placeholder="VP Operations"
                   />
                 </div>
               </div>
@@ -108,7 +240,7 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-sm font-semibold text-gray-700 mb-2">
-                    Email Address *
+                    Email *
                   </label>
                   <input
                     type="email"
@@ -117,12 +249,12 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
                     value={formData.email}
                     onChange={handleChange}
                     className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition"
-                    placeholder="john@acmerestaurants.com"
+                    placeholder="john@company.com"
                   />
                 </div>
                 <div>
                   <label className="block text-sm font-semibold text-gray-700 mb-2">
-                    Phone Number *
+                    Phone *
                   </label>
                   <input
                     type="tel"
@@ -136,120 +268,13 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
                 </div>
               </div>
 
-              {/* Business Info */}
-              <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">
-                  Number of Locations *
-                </label>
-                <select
-                  name="locations"
-                  required
-                  value={formData.locations}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition bg-white"
-                >
-                  <option value="">Select...</option>
-                  <option value="1">1 location</option>
-                  <option value="2-5">2-5 locations</option>
-                  <option value="6-10">6-10 locations</option>
-                  <option value="11-25">11-25 locations</option>
-                  <option value="26-50">26-50 locations</option>
-                  <option value="51+">51+ locations</option>
-                </select>
-              </div>
-
-              <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">
-                  Annual Spend on Cleaning/PM/Repairs (Per Location) *
-                </label>
-                <select
-                  name="annualSpend"
-                  required
-                  value={formData.annualSpend}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition bg-white"
-                >
-                  <option value="">Select range...</option>
-                  <option value="0-25000">$0 - $25,000</option>
-                  <option value="25000-50000">$25,000 - $50,000</option>
-                  <option value="50000-100000">$50,000 - $100,000</option>
-                  <option value="100000-200000">$100,000 - $200,000</option>
-                  <option value="200000+">$200,000+</option>
-                  <option value="unsure">Not sure</option>
-                </select>
-              </div>
-
-              <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">
-                  Geographic Footprint *
-                </label>
-                <select
-                  name="footprint"
-                  required
-                  value={formData.footprint}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition bg-white"
-                >
-                  <option value="">Select...</option>
-                  <option value="la-metro">LA Metro only</option>
-                  <option value="socal">Southern California</option>
-                  <option value="california">California-wide</option>
-                  <option value="west-coast">West Coast</option>
-                  <option value="national">National</option>
-                </select>
-              </div>
-
-              <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">
-                  Current Pain Point / Key Priority *
-                </label>
-                <select
-                  name="priority"
-                  required
-                  value={formData.priority}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition bg-white"
-                >
-                  <option value="">Select your biggest challenge...</option>
-                  <option value="standardize">Standardize cleaning across all locations</option>
-                  <option value="reduce-calls">Reduce after-hours vendor calls</option>
-                  <option value="cut-costs">Cut facility maintenance costs</option>
-                  <option value="better-reporting">Improve audit and compliance reporting</option>
-                  <option value="vendor-coordination">Coordinate multiple vendors (hood, pest, HVAC)</option>
-                  <option value="health-inspection">Health inspection support</option>
-                  <option value="emergency-response">Faster emergency response</option>
-                  <option value="other">Other</option>
-                </select>
-              </div>
-
-              <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">
-                  Where did you hear about us?
-                </label>
-                <select
-                  name="source"
-                  value={formData.source}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition bg-white"
-                >
-                  <option value="">Select...</option>
-                  <option value="google">Google Search</option>
-                  <option value="referral">Referral from another operator</option>
-                  <option value="linkedin">LinkedIn</option>
-                  <option value="industry-event">Industry Event</option>
-                  <option value="email">Email/Newsletter</option>
-                  <option value="social">Social Media</option>
-                  <option value="other">Other</option>
-                </select>
-              </div>
-
               <div className="flex gap-4 pt-4">
                 <button
                   type="submit"
                   disabled={isSubmitting}
                   className="flex-1 bg-gradient-to-r from-primary to-secondary text-white px-8 py-4 rounded-xl font-bold hover:shadow-xl transition disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  {isSubmitting ? 'Submitting...' : 'Get Custom Quote →'}
+                  {isSubmitting ? 'Sending...' : 'Get Custom Quote →'}
                 </button>
                 <button
                   type="button"
@@ -261,7 +286,7 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
               </div>
 
               <p className="text-xs text-gray-500 text-center">
-                By submitting, you agree to receive communications from Hey Spruce. We respect your privacy and never share your data.
+                Takes about 60 seconds. We'll send a quote and rollout options in 1 business day.
               </p>
             </form>
           </>
@@ -272,28 +297,28 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
               </svg>
             </div>
-            <h3 className="text-3xl font-bold text-gray-900 mb-4">Quote Request Received!</h3>
+            <h3 className="text-3xl font-bold text-gray-900 mb-4">Quote Request Received</h3>
             <p className="text-lg text-gray-600 mb-6">
-              Thank you for your interest in Hey Spruce. We're reviewing your information and will send you a customized quote + dashboard snapshot within 24 hours.
+              We're reviewing your locations and will send you a per-location quote + rollout plan within 1 business day.
             </p>
             <div className="bg-blue-50 rounded-2xl p-6 mb-8 text-left">
               <h4 className="font-bold text-gray-900 mb-3">What happens next:</h4>
               <ul className="space-y-2 text-gray-700">
                 <li className="flex items-start">
                   <span className="text-blue-600 font-bold mr-2">1.</span>
-                  <span>We'll analyze your current spend and location count</span>
+                  <span>We map a facilities program (cleaning, PM, repairs, vendor coordination) based on your locations</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-blue-600 font-bold mr-2">2.</span>
-                  <span>Calculate potential savings and ROI using our data</span>
+                  <span>You get a per-location price + rollout plan</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-blue-600 font-bold mr-2">3.</span>
-                  <span>Send you a board-ready proposal with pricing tiers</span>
+                  <span>We can pilot at a subset of locations before rolling out chain-wide</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-blue-600 font-bold mr-2">4.</span>
-                  <span>Include a dashboard demo showing real-time facility tracking</span>
+                  <span>You'll get dashboard access to track every location in real-time</span>
                 </li>
               </ul>
             </div>

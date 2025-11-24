@@ -53,10 +53,18 @@ export default function HomePageClient() {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
               <button
-                onClick={() => setIsQuoteModalOpen(true)}
+                onClick={() => {
+                  setIsQuoteModalOpen(true);
+                  if (typeof window !== 'undefined' && (window as any).gtag) {
+                    (window as any).gtag('event', 'hero_quote_click', {
+                      event_category: 'Quote CTA',
+                      event_label: 'Hero Section'
+                    });
+                  }
+                }}
                 className="bg-white text-primary px-8 py-4 rounded-2xl font-bold text-lg hover:bg-gray-100 transition text-center"
               >
-                Get Instant Quote
+                Get Custom Facilities Quote
               </button>
               <Link href="#roi-calculator" className="bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white px-8 py-4 rounded-2xl font-bold text-lg hover:bg-white/20 transition text-center">
                 Calculate Savings
@@ -139,6 +147,45 @@ export default function HomePageClient() {
         <ROICalculator />
       </div>
 
+      {/* How Quote Process Works */}
+      <section className="py-20 bg-white">
+        <div className="container-custom max-w-4xl">
+          <h2 className="text-4xl font-bold text-center mb-12">How the Quote Process Works</h2>
+          <div className="grid md:grid-cols-4 gap-8">
+            {[
+              {
+                num: '1',
+                title: 'Share your locations & priorities',
+                desc: 'Tell us about your concept, footprint, and biggest facility challenges'
+              },
+              {
+                num: '2',
+                title: 'We map a facilities program',
+                desc: 'Cleaning, PM, repairs, and vendor coordination tailored to your operations'
+              },
+              {
+                num: '3',
+                title: 'Get per-location pricing + rollout plan',
+                desc: 'Transparent quote delivered within 1 business day'
+              },
+              {
+                num: '4',
+                title: 'Pilot before scaling',
+                desc: 'Test at a subset of locations before rolling out chain-wide'
+              }
+            ].map((step, idx) => (
+              <div key={idx} className="text-center">
+                <div className="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+                  {step.num}
+                </div>
+                <h3 className="font-bold text-lg mb-2">{step.title}</h3>
+                <p className="text-gray-600 text-sm">{step.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Metrics Dashboard */}
       <MetricsDashboard />
 
@@ -177,7 +224,15 @@ export default function HomePageClient() {
 
               <div className="mt-8">
                 <button
-                  onClick={() => setIsQuoteModalOpen(true)}
+                  onClick={() => {
+                    setIsQuoteModalOpen(true);
+                    if (typeof window !== 'undefined' && (window as any).gtag) {
+                      (window as any).gtag('event', 'platform_quote_click', {
+                        event_category: 'Quote CTA',
+                        event_label: 'Platform Section'
+                      });
+                    }
+                  }}
                   className="inline-flex items-center rounded-md bg-slate-900 px-5 py-2.5 text-sm font-semibold text-white hover:bg-slate-800"
                 >
                   See how the platform works
@@ -257,10 +312,18 @@ export default function HomePageClient() {
           <p className="text-xl mb-8 text-white/90">Join 50+ multi-location restaurant brands saving 28% on facility costs</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
-              onClick={() => setIsQuoteModalOpen(true)}
+              onClick={() => {
+                setIsQuoteModalOpen(true);
+                if (typeof window !== 'undefined' && (window as any).gtag) {
+                  (window as any).gtag('event', 'footer_quote_click', {
+                    event_category: 'Quote CTA',
+                    event_label: 'Footer Section'
+                  });
+                }
+              }}
               className="bg-white text-primary px-10 py-4 rounded-2xl font-bold text-lg hover:bg-gray-100 transition"
             >
-              Get Your Custom Quote
+              Get Custom Facilities Quote
             </button>
             <a
               href="tel:+18772532646"
@@ -273,7 +336,7 @@ export default function HomePageClient() {
       </section>
 
       {/* Quote Modal */}
-      <QuoteModal isOpen={isQuoteModalOpen} onClose={() => setIsQuoteModalOpen(false)} />
+      <QuoteModal isOpen={isQuoteModalOpen} onClose={() => setIsQuoteModalOpen(false)} source="hero" />
     </>
   );
 }
