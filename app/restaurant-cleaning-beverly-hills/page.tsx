@@ -1,7 +1,5 @@
 import Link from 'next/link';
 import Script from 'next/script';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -103,8 +101,7 @@ export default function BeverlyHillsPage() {
           __html: JSON.stringify(localBusinessSchema)
         }}
       />
-      <Header />
-      <main>
+
       {/* Breadcrumbs */}
       <div className="bg-gray-50 border-b border-gray-200">
         <div className="container-custom py-4">
@@ -314,8 +311,6 @@ export default function BeverlyHillsPage() {
           </div>
         </div>
       </section>
-    </main>
-    <Footer />
     </>
   );
 }
